@@ -11,6 +11,11 @@ import { AboutComponent } from './about/about.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { ContactComponent } from './contact/contact.component';
 
+import { NgImageSliderModule } from 'ng-image-slider';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +28,9 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    NgImageSliderModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

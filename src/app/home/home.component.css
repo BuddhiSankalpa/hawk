@@ -56,8 +56,26 @@
     font-size: 15px;
     margin-bottom: 0px;
 }
-/* .carousel-cell{
-    width: 300px !important;
-    margin-right: 80px !important;
-    padding-right: 100px !important;
-} */
+.container-news{
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: black;
+  }
+
+  .scrolling-text {
+    position: absolute;
+    white-space: nowrap;
+    color: #fff;
+  }
+
+  /* Below doesn't work to pause */
+
+  .scrolling-text:hover, .container:hover {
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
