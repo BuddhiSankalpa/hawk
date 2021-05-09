@@ -582,7 +582,8 @@ div#preloader {
 	vertical-align: middle;
 }
 .slide-content {
-    margin-top: 60px;
+    margin-top: 150px;
+    margin-bottom: 80px;
 }
 .title2 {
     font-size: 90px;
@@ -967,7 +968,7 @@ span.users {
 /*  9.Payment History area
 /*----------------------------------------*/
 .payment-history-area {
-    background: url(img/background/bg3.jpg);
+    background: url(/src/assets/img/background/bg3.jpg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -1688,7 +1689,7 @@ span.users {
     position: relative;
 }
 .page-area {
-    background: url(img/background/b.jpg);
+    background: url(../img/background/b.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;

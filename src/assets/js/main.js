@@ -69,12 +69,12 @@ windows.on('scroll', function() {
 /*--------------------------
  Parallax
 ---------------------------- */	
-    var parallaxeffect = $(window);
-    parallaxeffect.stellar({
-        responsive: true,
-        positionProperty: 'position',
-        horizontalScrolling: false
-    });
+    // var parallaxeffect = $(window);
+    // parallaxeffect.stellar({
+    //     responsive: true,
+    //     positionProperty: 'position',
+    //     horizontalScrolling: false
+    // });
 
 /*--------------------------
  MagnificPopup
