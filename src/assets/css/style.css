@@ -554,7 +554,7 @@ div#preloader {
 /*  3. Intro Area
 /*----------------------------------------*/
 .slide-area {
-    background: rgba(0, 0, 0, 0) url(../img/slider/h1.jpg) no-repeat scroll top center / cover;
+    /* background: rgba(0, 0, 0, 0) url(../img/slider/WebBanner4.png) no-repeat scroll top center / cover; */
     width: 100%;
     height: 100%;
     z-index: 1;
