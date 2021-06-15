@@ -57,13 +57,13 @@
     margin-bottom: 0px;
 }
 .container-news{
-    height: 30px;
+    height: 40px;
     overflow: hidden;
     position: relative;
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background: black;
+    /* margin-top: 20px; */
+    /* margin-bottom: 20px; */
+    background: rgb(1, 2, 53);
   }
 
   .scrolling-text {
