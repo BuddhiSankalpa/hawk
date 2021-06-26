@@ -1,0 +1,67 @@
+.news-feed {
+    /* border: ridge 1px rgb(255, 0, 0); */
+    background-color: black;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 70px;
+    z-index: 10;
+}
+
+.bar-text {
+    align-self: center;
+    color: white;
+    margin-top: 11px;
+    margin-left: 20px;
+    font-size: large;
+    background: rgb(0, 0, 0);
+    -moz-mask-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 12%, rgba(255, 255, 255, 1) 100%);
+    -webkit-mask-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 12%, rgba(255, 255, 255, 1) 100%);
+    mask-image: linear-gradient(to left, black 12%, rgb(255, 255, 255) 99%, transparent 100%);
+}
+
+.bar-head {
+    border-radius: 0 10px 10px 0;
+    align-self: center;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 7px 25px;
+    font-size: x-large;
+}
+
+
+.blink_ {
+    animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0.6;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .news-feed { 
+        top: 49px; 
+    }
+    
+    .bar-head { 
+        padding: 3px 10px;
+        font-size:  large;
+    }
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .news-feed { 
+        top: 58px; 
+    }
+    
+    .bar-head { 
+        padding: 3px 10px;
+        font-size: x-large;
+    }
+
+}
