@@ -10,7 +10,7 @@ export class NewsFeedsComponent implements OnInit {
   newsfeed:string; 
 
   constructor() {
-    this.newsfeed = "This is a news feed line place hol    -we    -webkit-mask-image: line CREATE src/app/header.2/ar ";
+    this.newsfeed = "Registration Opens on 07th July.. Stay tuned.....";
   
    }
 
