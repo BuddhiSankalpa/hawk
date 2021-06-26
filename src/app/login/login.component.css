@@ -13,9 +13,11 @@ input[type=number] {
 .account-banner{
   background-image: url('../../assets/img/background/account.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; 
 }
 
 .registration{
   height: 510px;
+  filter:none;
+
 }

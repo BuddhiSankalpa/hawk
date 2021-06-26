@@ -1,93 +1,96 @@
 <app-header2></app-header2>
 
 <section class="m-auto mt-lg-5 account-banner ">
-    <div class="row align-items-center  mt-lg-5  " >
+    <div class="row align-items-center  mt-lg-5  ">
         <div class="col-lg-7 text-center d-none d-lg-block d-md-block">1</div>
         <div class="col-lg-3 text-center">
             <p>Sign up with DOKS. in a few minutes</p>
-            <div class="registration bg-white" >
-                
+            <div class="registration bg-white">
+
                 <div class=" d-flex tab-header ">
-                   <div id="tab-btn-2" (click)="setTab2( )" class="col-6 text-center p-3  tab-btn tab-btn-end">Login</div> 
-                    <div id="tab-btn-1"(click)="setTab1( )"  class="col-6 text-center p-3  tab-btn   tab-btn-start">Registration</div>
-                   
+                    <div id="tab-btn-2" (click)="setTab2( )" class="col-6 text-center p-3  tab-btn tab-btn-end">Login</div>
+                    <div id="tab-btn-1" (click)="setTab1( )" class="col-6 text-center p-3  tab-btn   tab-btn-start">Registration</div>
+
                 </div>
                 <div class="mt-3 pb-4">
+                    <div class=" ">
+                        <form #f="ngForm" id="registration" class=" " style="display: block;">
 
-                    <form #f="ngForm"  id="registration" class="pt-4" style="display: block;">
-
-                        <div class="form-group">
-                            <div class="col-12 px-2">
-                                <input placeholder="First Name" class="form-control" matInput minlength="3" name="FirstName" #FirstName="ngModel" [required]="FirstName" ngModel [(ngModel)]="register.FirstName">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-12 px-2">
-                                <input placeholder="Last Name" class="form-control" matInput minlength="3" name="LastName" #LastName="ngModel" [required]="LastName" ngModel [(ngModel)]="register.LastName">
-                            </div>
-                        </div>
-                        <br>
-                        <div lass="form-group ">
-                            <div class="text-center w-100">
-                                <button class="btn-orange btn btn-block w-50" [disabled]="!f.valid" #submitBtn>Login</button>
-                            </div>
-                        </div>
-
-                    </form>
-                    <form #f="ngForm" id="login" style="display: none;"  >
-
-                        <div class="form-group">
-                            <div class="col-12 px-2">
-                                <input placeholder="First Name" class="form-control" matInput minlength="3" name="FirstName" #FirstName="ngModel" [required]="FirstName" ngModel [(ngModel)]="register.FirstName">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-12 px-2">
-                                <input placeholder="Last Name" class="form-control" matInput minlength="3" name="LastName" #LastName="ngModel" [required]="LastName" ngModel [(ngModel)]="register.LastName">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-12 px-2">
-                                <input placeholder="Email" class="form-control" matInput minlength="3" name="Email" #Email="ngModel" [required]="Email" ngModel [(ngModel)]="register.Email">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-12 px-2">
-                                <input placeholder="Phone" class="form-control" matInput minlength="9" type="number" name="Phone" #Phone="ngModel" [required]="Phone" ngModel [(ngModel)]="register.Phone">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-12 px-2">
-                                <textarea placeholder="Comments" class="form-control" matInput ngModel name="Comments" [(ngModel)]="register.Comments"></textarea>
-                            </div>
-                        </div>
-
-                        <br>
-
-                        <div class="form-group px-3">
-                            <div class="form-row">
-                                <div class="col-auto">
-                                    <input type="checkbox">
+                            <div class="form-group">
+                                <div class="col-12  ">
+                                    <input placeholder="Email" class="form-control" matInput minlength="3" name="FirstName" #FirstName="ngModel" [required]="FirstName" ngModel [(ngModel)]="register.FirstName">
                                 </div>
-                                <p class="col-11  pl-0  text-left text-muted" style="font-size:x-small;">
-                                    By clicking here I give my consent for DOKS to contact me for marketing purposes. You can opt out at any time.
-                                </p>
                             </div>
-                        </div>
 
-
-                        <div lass="form-group ">
-                            <div class="text-center w-100">
-                                <button class="btn-orange btn btn-block w-50" [disabled]="!f.valid" #submitBtn>Submit</button>
+                            <div class="form-group">
+                                <div class="col-12">
+                                    <input placeholder="Password" class="form-control" matInput minlength="3" name="LastName" #LastName="ngModel" [required]="LastName" ngModel [(ngModel)]="register.LastName">
+                                </div>
                             </div>
-                        </div>
+                            <br>
+                            <div lass="form-group ">
+                                <div class="text-center w-100">
+                                    <button class="btn-orange btn btn-block w-50" [disabled]="!f.valid" #submitBtn>Login</button>
+                                </div>
+                            </div>
 
-                    </form>
+                        </form>
+                    </div>
+                    <div>
+                        <form #f="ngForm" id="login" style="display: none;">
+
+                            <div class="form-group">
+                                <div class="col-12">
+                                    <input placeholder="First Name" class="form-control" matInput minlength="3" name="FirstName" #FirstName="ngModel" [required]="FirstName" ngModel [(ngModel)]="register.FirstName">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-12">
+                                    <input placeholder="Last Name" class="form-control" matInput minlength="3" name="LastName" #LastName="ngModel" [required]="LastName" ngModel [(ngModel)]="register.LastName">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-12">
+                                    <input placeholder="Email" class="form-control" matInput minlength="3" name="Email" #Email="ngModel" [required]="Email" ngModel [(ngModel)]="register.Email">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-12">
+                                    <input placeholder="Phone" class="form-control" matInput minlength="9" type="number" name="Phone" #Phone="ngModel" [required]="Phone" ngModel [(ngModel)]="register.Phone">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-12">
+                                    <textarea placeholder="Comments" class="form-control" matInput ngModel name="Comments" [(ngModel)]="register.Comments"></textarea>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <div class="form-group px-3">
+                                <div class="form-row">
+                                    <div class="col-auto">
+                                        <input type="checkbox">
+                                    </div>
+                                    <p class="col-11  pl-0  text-left text-muted" style="font-size:x-small;">
+                                        By clicking here I give my consent for DOKS to contact me for marketing purposes. You can opt out at any time.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div lass="form-group ">
+                                <div class="text-center w-100">
+                                    <button class="btn-orange btn btn-block w-50" [disabled]="!f.valid" #submitBtn>Submit</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

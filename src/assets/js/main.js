@@ -160,6 +160,9 @@
             autoplay: true,
             dots: true,
             loop: true,
+            autoplaySpeed:100,
+            slideTransition:"ease",
+            navSpeed:1,
             items: 1
         });
 
