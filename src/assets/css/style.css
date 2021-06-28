@@ -6,27 +6,26 @@
 */
 
 
+/* cyrillic-ext */
+
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Raleway', sans-serif !important;
     color: #646464;
     /* background-color: #0d141e;
      */
-     background-image: url('../img/background/body_bg.jpg');
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position:center;
-}
-
-a {
-    color: hsl(0, 0%, 100%);
+    background-image: url('../img/background/body_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 a:hover {
-    color: #3b8af2;
+    color: #ff9100;
     text-decoration: none;
 }
 
@@ -39,6 +38,9 @@ h6 {
     font-family: "Roboto", sans-serif;
 }
 
+p{
+    opacity: 0.8;
+}
 
 /*--------------------------------------------------------------
 # Preloader
@@ -246,7 +248,7 @@ h6 {
 #header .btn-orange {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
-    font-weight: 500;
+  
     font-size: 14px;
     letter-spacing: 1px;
     display: inline-block;
@@ -332,9 +334,9 @@ h6 {
 --------------------------------------------------------------*/
 
 .header .btn-orange {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Raleway', sans-serif;  font-weight: 700;
     text-transform: uppercase;
-    font-weight: 500;
+   
     font-size: 14px;
     letter-spacing: 1px;
     display: inline-block;
@@ -352,7 +354,6 @@ h6 {
     color: #E6922E;
     font-weight: 900;
 }
-
 
 
 /*--------------------------------------------------------------
@@ -541,6 +542,7 @@ h6 {
     visibility: hidden;
     border-radius: 10px;
     padding: 10px 0;
+    text-align: center;
 }
 
 .mobile-nav * {
@@ -550,18 +552,45 @@ h6 {
 }
 
 .mobile-nav a {
+    align-self: center;
     display: block;
+    font-size: x-large;
     position: relative;
-    color: #222222;
-    padding: 10px 20px;
-    font-weight: 500;
-    outline: none;
+    color: #e7e7e7;
+    padding: 20px 20px;
+    font-weight: 600;
+    outline: none;  
+border-bottom:solid 1px rgb(61, 61, 61);
+}  
+
+ 
+.mobile-nav .btn-orange {
+    font-family: 'Raleway', sans-serif;  font-weight: 700;
+    text-transform: uppercase;
+  
+    font-size: 20px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 20rem;
+    border: none;
+    transition-duration: 100ms;
+    color: #ffffff;
+    background: #E6922E;
+    margin-top: 50px;
 }
+ 
+.mobile-nav .btn-orange:hover {
+    background: #fff;
+    color: #E6922E;
+    font-weight: 900;
+}
+
 
 .mobile-nav a:hover,
 .mobile-nav .active>a,
 .mobile-nav li:hover>a {
-    color: #106eea;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -738,10 +767,8 @@ h6 {
     font-weight: 400;
 }
 
-#hero .btn-get-started {
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    font-weight: 500;
+#hero .btn-get-started {    font-family: 'Raleway', sans-serif;  font-weight: 700;
+    text-transform: uppercase; 
     font-size: 14px;
     letter-spacing: 1px;
     display: inline-block;
@@ -844,9 +871,14 @@ h6 {
 --------------------------------------------------------------*/
 
 section {
-    color: white;
+    color: rgb(204, 204, 204);
     padding: 60px 0;
     overflow: hidden;
+}
+
+.section-bg {
+    background-color: #f6f9fe;
+    color: #000;
 }
 
 .section-title {
@@ -855,7 +887,7 @@ section {
 }
 
 .section-title .btn-orange {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Raleway', sans-serif;  font-weight: 700;
     text-transform: uppercase;
     font-size: 20px;
     letter-spacing: 1px;
@@ -901,8 +933,7 @@ section {
 }
 
 .section-title p {
-    margin: 15px auto 0 auto;
-    font-weight: 600;
+    margin: 15px auto 0 auto; 
 }
 
 @media (min-width: 1024px) {
@@ -987,7 +1018,7 @@ section {
     transition: all 0.3s ease-in-out;
     border-radius: 8px;
     z-index: 1;
-    color: #132338;
+    color: #040042d7;
     text-align: center;
 }
 
@@ -1004,7 +1035,7 @@ section {
 }
 
 .featured-services .icon-box:hover::before {
-    background: #003c8a;
+    background: #001b3e;
     top: 0;
     border-radius: 0px;
 }
@@ -1181,7 +1212,7 @@ section {
 .counts .count-box p {
     padding: 0;
     margin: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Raleway', sans-serif;  
     font-size: 14px;
 }
 
@@ -1685,25 +1716,22 @@ section {
 /*--------------------------------------------------------------
 # webinar
 --------------------------------------------------------------*/
- 
 
 .webinar .box {
     padding: 20px;
-    background: rgba(255, 255, 255, 0.322);
     text-align: center;
     box-shadow: 0px 0px 4px rgba(12, 11, 11, 0.12);
-    border-radius: 5px;
+    border-radius: 2rem;
+    background-color: #041334;
     position: relative;
     overflow: hidden;
     transition: 0.3s;
     margin: 20px;
-
 }
 
 .webinar .box h5 {
     font-weight: 400;
-    padding: 20px 15px;
-    font-weight: 600;
+    padding: 20px 15px; 
     color: #ffbf48;
 }
 
@@ -1724,27 +1752,28 @@ section {
     font-size: 16px;
     padding: 10px 50px;
     font-weight: 500;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Raleway', sans-serif;   
     font-weight: 600;
     transition: 0.3s;
 }
 
 .webinar .box:hover {
-    background: #ffa600;
     color: #fff !important;
-    margin: 10px;
-
+    margin : 10px ;
 }
 
 .webinar .box:hover h5,
 .webinar .box:hover h2 {
-    color: #fff; 
+    color: #fff;
 }
 
 .webinar .box:hover .btn-text {
+    background: #fff;
    background: #fff; 
-   color: #ffa600;
-
+    background: #fff;
+   background: #fff; 
+    background: #fff;
+    color: #ffa600;
 }
 
 .webinar .featured h3 {
@@ -1778,8 +1807,8 @@ section {
 .p-card:hover {
     transition: 300ms !important;
     cursor: pointer;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 5px ;
+
 }
 
 .pricing .box {
@@ -1862,8 +1891,7 @@ section {
     transition: none;
     font-size: 14px;
     padding: 10px 50px;
-    font-weight: 400;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Raleway', sans-serif;  font-weight: 700;
     font-weight: 600;
     transition: 0.1s;
 }
@@ -1924,18 +1952,19 @@ section {
 }
 
 .registration .tab-btn-end:hover {
+    color: #fff;
     cursor: pointer;
-    background-color: #ffffff;
-    border-radius: 10px 0 0 0;
-
+    background-color: #ffa600;
+    border-radius: 0 10px 0 0;
 }
 
 .registration .tab-btn-start:hover {
+    color: #fff;
     cursor: pointer;
-    background-color: #ffffff;
-    border-radius: 0 10px 0 0;
-
+    background-color: #ffa600;
+    border-radius: 10px 0 0 0;
 }
+
 .registration .form-control {
     border-top: none !important;
     border-left: none !important;
@@ -1947,12 +1976,12 @@ section {
 }
 
 .registration .btn-orange {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Raleway', sans-serif;   
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1px;
     display: inline-block;
-    padding: 7px 15px;
+    padding: 10px 15px;
     border-radius: 50rem;
     border: none;
     transition-duration: 100ms;
@@ -2008,11 +2037,11 @@ section {
 }
 
 .faq .faq-list a.collapse {
-    color: #ffffff;
+    color: #020016;
 }
 
 .faq .faq-list a.collapsed {
-    color: #dfdfdf;
+    color: #070022;
 }
 
 .faq .faq-list a.collapsed:hover {
@@ -2165,9 +2194,8 @@ section {
 }
 
 #contact .btn-orange {
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    font-weight: 500;
+    font-family: 'Raleway', sans-serif;  font-weight: 700;
+    text-transform: uppercase; 
     font-size: 14px;
     letter-spacing: 1px;
     display: inline-block;
@@ -2278,7 +2306,7 @@ input {
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Raleway', sans-serif;   
     color: #777777;
 }
 
