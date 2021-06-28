@@ -1,77 +1,100 @@
+<app-header2></app-header2>
 
-        <!-- <div id="preloader"></div> -->
-        <div  style="background-image:url('assets/img/background/body_bg.jpg');"> 
-      
-    <!-- Start breadcumb Area -->
-    <div class="page-area">
-        <div class="breadcumb-overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="breadcrumb text-center">
-                        <div class="section-headline white-headline">
-                            <h3>Login</h3>
-                        </div>
-                        <ul class="breadcrumb-bg">
-                            <li class="home-bread">Home</li>
-                            <li>Login</li>
-                        </ul>
+<section class="m-auto mt-lg-5 account-banner ">
+    <div class="row align-items-center  mt-lg-5  ">
+        <div class="col-lg-7 text-center d-none d-lg-block d-md-block">1</div>
+        <div class="col-lg-3 text-center">
+            <p>Sign up with DOKS. in a few minutes</p>
+            <div class="registration bg-white">
+
+                <div class=" d-flex tab-header ">
+
+                    <div id="tab-btn-1" (click)="setTab1( )" class="col-6 text-center p-3  tab-btn selected  tab-btn-start">Registration</div>
+                    <div id="tab-btn-2" (click)="setTab2( )" class="col-6 text-center p-3  tab-btn  tab-btn-end">Login</div>
+                </div>
+
+                <div class="mt-3 p-3">
+                    <div class=" py-5 " id="login" style="display: none;">
+                        <form #f="ngForm">
+                            <br>
+                            <br>
+                            <div class="form-group">
+                                <div class="col-12  ">
+                                    <input placeholder="Email" class="form-control" matInput minlength="3" name="email" #email="ngModel" [required]="email" ngModel [(ngModel)]="register.FirstName">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-12">
+                                    <input placeholder="Password" class="form-control" matInput minlength="3" type="password" name="password" #password="ngModel" [required]="password" ngModel [(ngModel)]="register.LastName">
+                                </div>
+                            </div>
+                            <br>
+                            <div lass="form-group ">
+                                <div class="text-center w-100">
+                                    <button class="btn-orange btn btn-block w-50" [disabled]="!f.valid" #submitBtn>Login</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div id="registration" style="display: block;">
+                        <form #f="ngForm">
+
+                            <div class="form-group">
+                                <div class="col-12">
+                                    <input placeholder="First Name" class="form-control" matInput minlength="3" name="FirstName" #FirstName="ngModel" [required]="FirstName" ngModel [(ngModel)]="register.FirstName">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-12">
+                                    <input placeholder="Last Name" class="form-control" matInput minlength="3" name="LastName" #LastName="ngModel" [required]="LastName" ngModel [(ngModel)]="register.LastName">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-12">
+                                    <input placeholder="Email" class="form-control" matInput minlength="3" name="Email" #Email="ngModel" [required]="Email" ngModel [(ngModel)]="register.Email">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-12">
+                                    <input placeholder="Phone" class="form-control" matInput minlength="9" type="number" name="Phone" #Phone="ngModel" [required]="Phone" ngModel [(ngModel)]="register.Phone">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-12">
+                                    <textarea placeholder="Comments" class="form-control" matInput ngModel name="Comments" [(ngModel)]="register.Comments"></textarea>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <div class="form-group px-3">
+                                <div class="form-row">
+                                    <div class="col-auto">
+                                        <input type="checkbox">
+                                    </div>
+                                    <p class="col-11  pl-0  text-left text-muted" style="font-size:x-small;">
+                                        By clicking here I give my consent for DOKS to contact me for marketing purposes. You can opt out at any time.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div lass="form-group ">
+                                <div class="text-center w-100">
+                                    <button class="btn-orange btn btn-block w-50" [disabled]="!f.valid" #submitBtn>Submit</button>
+                                </div>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End breadcumb Area -->
-    <!-- Start Slider Area -->
-    <div class="login-area page-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="login-page">
-                        <div class="login-form">
-                            <h4 class="login-title">LOGIN</h4>
-                            <div class="row">
-                                <form id="contactForm" method="POST" action="http://rockstheme.com/rocks/aievari-live/contact.php" class="log-form">
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <input type="text" id="name" class="form-control" placeholder="Username" required data-error="Please enter your name">
-                                    </div>
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <input type="password" id="msg_subject" class="form-control" placeholder="Password" required data-error="Please enter your message subject">
-                                    </div>
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="check-group flexbox">
-                                            <label class="check-box">
-                                                <input type="checkbox" class="check-box-input" checked>
-                                                <span class="remember-text">Remember me</span>
-                                            </label>
-
-                                            <a class="text-muted" href="#">Forgot password?</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <button type="submit" id="submit" class="login-btn">Login</button>
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div> 
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="clear"></div>
-                                        <div class="separetor"><span>Or with Sign</span></div>
-                                        <div class="sign-icon">
-                                            <!-- <ul>
-                                                <li><a class="facebook" href="#">Facebook</a></li>
-                                                <li><a class="twitter" href="#">twitter</a></li>
-                                                <li><a class="google" href="#">google+</a></li>
-                                            </ul> -->
-                                            <div class="acc-not">Don't have an account  <a routerLink="/register"> Sign up</a></div>
-                                        </div> 
-                                    </div> 
-                                </form> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-         </div>
-    </div>
-       
-	</div>	
+</section>

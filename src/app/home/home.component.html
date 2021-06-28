@@ -1,762 +1,513 @@
+<app-topbar>
+</app-topbar>
 
-<div id="head" style="background-image:url('assets/img/background/body_bg.jpg');">
+<app-header></app-header>
 
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+<section style="padding: 0 0;" id="home-carosal">
+    <div class="owl-carousel  home-carousel mt-5" data-aos="zoom-out" data-aos-delay="500">
 
-    <!-- <div id="preloader"></div> -->
+        <div class="testimonial-item m-auto home-carosal-banner" style="background-image: url('../../assets/img/background/1.png');">
+        </div>
 
-    <!-- header end -->
-    <!-- Start Intro Area -->
-    <div class="slide-area fix" data-stellar-background-ratio="0.6">
-        <div class="display-table">
-            <div class="display-table-cell" >
-                <!-- <div class="container"> -->
-                    <!-- <div class="row"> -->
-                        <!-- <div class="col-md-12 col-sm-12 col-xs-12"> -->
-                            <!-- Start Slider content -->
-                            <!-- <div class="slide-content text-center"> -->
-                                <img src="../../assets/img/slider/WebBanner4.png" />
-                                <button routerLink="/register" class="btn"></button>
-                                <!-- <h2 class="title2">Live Traders, Live Performance, Innovative Training</h2>
-                                <div class="layer-1-3">
-                                    <a  routerLink="/register" class="ready-btn left-btn" >Get started</a> -->
-                                    <!-- <div class="video-content">
-                                        <a href="https://www.youtube.com/watch?v=nRnOVZLbDU4" class="video-play vid-zone">
-                                            <i class="fa fa-play"></i>
-                                            <span>watch video</span>
-                                        </a>
-                                    </div> -->
-                                <!-- </div> -->
-                            <!-- </div> -->
-                            <!-- End Slider content -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                <!-- </div> -->
-            </div>
+        <div class="testimonial-item m-auto home-carosal-banner" style="background-image: url('../../assets/img/background/2.png');">
+        </div>
+
+        <div class="testimonial-item m-auto home-carosal-banner" style="background-image: url('../../assets/img/background/3.png');">
+        </div>
+
+        <div class="testimonial-item m-auto home-carosal-banner" style="background-image: url('../../assets/img/background/4.png');">
         </div>
     </div>
-    <!-- End Intro Area -->
+</section>
+<app-news-feeds></app-news-feeds>
+<br>
+<main id="main">
 
-    <!-- News Line -->
-    <div class="container-news">
-        <div class="scrolling-text" [@scroll]="state" (@scroll.done)="scrollDone()">Registration opens on 01st July.  Stay Tuned...</div>
-    </div>
-    <!-- End News Line -->
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
+        <div class="container" data-aos="fade-up">
 
-    <!-- Start Count area -->
-    <div class="counter-area fix ">
-        <div class="container">
-            <!-- Start counter Area -->
-            <!--
-             <div class="row">
-                <div class="fun-content">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="fun_text">
-                            <span class="counter-icon"><i class="flaticon-035-savings"></i></span>
-                            <span class="counter">$5974544</span>
-                            <h4>Total Deposited</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="fun_text">
-                           <span class="counter-icon"><i class="flaticon-034-reward"></i></span>
-                            <span class="counter">2209</span>
-                            <h4>Total Members</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="fun_text">
-                           <span class="counter-icon"><i class="flaticon-016-graph"></i></span>
-                            <span class="counter">$3974544</span>
-                            <h4>Total Payments</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="fun_text">
-                          <span class="counter-icon"><i class="flaticon-043-world"></i></span>
-                            <span class="counter">80</span>
-                            <h4>World Country</h4>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center my-2 section-title">
+                <h3 data-aos="fade-up" data-aos-delay="100">Become a Pro Trader with
+                    <span> DOKS </span>
+                </h3>
+                <br>
+
+                <h6 class=" m-auto">
+                    Trade as a pro with DOKS. We will awake the Super Trader within you with proper guidance, education, Live market updates, financial news, and streaming services.
+                </h6>
+
             </div>
-        </div>
-    </div>
-    -->
-    <!-- End Count area -->
 
-     <!-- Start Work proses Area -->
-     <div style="padding-top: 30px; background: #e2e4ec;" class="work-proses fix bg-color">
-        <div class="container">
             <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="section-headline text-center">
-                        <h3>Become a Pro Trader with DOKS.</h3>
-                        <p>Trade as a pro with DOKS. We will awake the Super Trader within you with proper guidance, education, Live market updates, financial news, and streaming services.</p>
+
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="bx bx-bulb"></i></div>
+                        <h4 class="title"> Learn </h4>
+                        <p class="description">We employ best people and invest in advanced and cutting-edge technologies to ensure that our students learn effectively and acquire the fundamental and technical skills for consistency in theirtrading.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon"><i class="bx bx-transfer"></i></div>
+                        <h4 class="title"> Trade </h4>
+                        <p class="description">DOKS group of professional trainers focus on trader skill development and understanding, by using advanced proprietary technologies to boost trader’s ability to recall market patterns and to develop trading strategies that cater
+                            for a person’s unique personality and temperament.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon"><i class="bx bx-dollar"></i></div>
+                        <h4 class="title"> Profit </h4>
+                        <p class="description">Our daily briefings are designed with most accurate financial data and analysis so you can Learn what’s happening in the world of investing in just 5 minutes. We select investing insights from the world’s top investing experts.</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <!-- End Featured Services Section -->
+
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>- About -</h2>
+                <h3> About <span>DOKS</span></h3>
+            </div>
+
             <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="work-proses-inner text-center">
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <div class="single-proses">
-                                    <div class="proses-content">
-                                        <div class="proses-icon point-blue">
-                                            <span class="point-view">01</span>
-                                            <a href=""><i class="ti-book"></i></a>
-                                        </div>
-                                        <div class="proses-text">
-                                            <h4>Learn</h4>
-                                            <p style="margin-left: 10px; text-align: justify;">We employ best people and invest in advanced and cutting-edge technologies to ensure that our students learn effectively and acquire the fundamental and technical skills for consistency in theirtrading.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End column -->
-                            <div class="col-md-4 col-sm-4 col-xs-12" >
-                                <div class="single-proses">
-                                    <div class="proses-content">
-                                        <div class="proses-icon point-orange">
-                                           <span class="point-view">02</span>
-                                            <a href=""><i class="ti-stats-up"></i></a>
-                                        </div>
-                                        <div class="proses-text">
-                                            <h4>Trade</h4>
-                                            <p style="text-align: justify;">DOKS group of professional trainers focus on trader skill development and understanding, by using advanced proprietary technologies to boost trader’s ability to recall market patterns and to develop trading strategies that cater for a person’s unique personality and temperament.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End column -->
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <div class="single-proses last-item">
-                                    <div class="proses-content">
-                                        <div class="proses-icon point-green">
-                                           <span class="point-view">03</span>
-                                            <a href=""><i class="ti-money"></i></a>
-                                        </div>
-                                        <div class="proses-text">
-                                            <h4>Profit</h4>
-                                            <p style="margin-right: 50px;text-align:justify;">Our daily briefings are designed with most accurate financial data and analysis so you can Learn what’s happening in the world of investing in just 5 minutes. We select investing insights from the world’s top investing experts.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End column -->
+                <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="100">
+                    <img src="../../assets/img/about/ab.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column
+          justify-content-start" data-aos="fade-up" data-aos-delay="100">
+
+                    <p class="text-justify">
+                        DOKS International started with a group of ambitious individuals who appreciate independent thinking and most importantly the value of integrity, honesty and friendship. We are a community of professional investors and traders that share the same ideology
+                        on how to invest and be profitable in highly competitive local and global markets and develop trading talent. DOKS International helps the investor achieve the realistic returns, identify potential areas, and guide you to be a
+                        successful investor and a trader. Our business success relies on engaging a highly diverse team of people across the globe who are client-focused, think differently and draw on a range of backgrounds and experiences to contribute
+                        their unique perspective. Together we are relentlessly committed to making a difference and enriching lives!
+                    </p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="section-title">
+                <h3> Our <span>Mission</span></h3>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column
+          justify-content-start" data-aos="fade-up" data-aos-delay="100">
+
+                    <p class="text-justify">
+                        Our focus and ambition are to develop World Class Traders and Investors. We employ best people and invest in advanced and cutting-edge technologies to ensure that our students learn effectively and acquire the fundamental and technical skills for consistency
+                        in their trading. DOKS group of professional trainers focus on trader skill development and understanding, by using advanced proprietary technologies to boost trader’s ability to recall market patterns and to develop trading strategies
+                        that cater for a person’s unique personality and temperament. This unique approach ensures our students are fully immersed into the most cutting edge and relevant training regarding strategies, approach and development techniques
+                        that keep our traders at the peak of their performance. With your dedication, we will make you a world class trader and an investor!
+                    </p>
+                </div>
+                <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="100">
+                    <img src="../../assets/img/about/compass.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
+    <hr style="background-color: rgba(255, 255, 255, 0.137); width: 60%;">
+
+    <!-- ======= Services Section ======= -->
+    <section id="Specialized" class="services">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Specialized</h2>
+                <h3>What makes <span>DOKS</span> International Unique?</h3>
+                <p>Most of the times you will see investing products and training focus on either fundamental or technical analysis. Our research shows the way to succeed in the market you need both to get the complete picture. We accomplish our mission
+                    by delivering actionable investing content, comprehensive tools, and educational resources to help you make smarter trading decisions.</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-briefcase"></i></div>
+                        <h4><a href="">Proficiency</a></h4>
+                        <p class="text-dark">
+                            Our US and Global market research & analysis are done by professional traders and researchers.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-donate-heart"></i></div>
+                        <h4><a href="">Trust</a></h4>
+                        <p class="text-dark">
+                            DOKS International is a company which holds the trust of clients over a decade in USA and now expanding its wings to Sri Lanka.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-support"></i></div>
+                        <h4><a href="">Support</a></h4>
+                        <p class="text-dark">
+                            Weekly Trainings, Q & A sessions, live stream sessions, tips, and a customer care crew who’s passionate in assisting you!
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="250">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-file-find"></i></div>
+                        <h4><a href="">Research</a></h4>
+                        <p class="text-dark">
+                            We offer timely, integrated analysis of companies, sectors, markets and economies, helping clients with their most critical decisions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-health"></i></div>
+                        <h4><a href="">Mentorship</a></h4>
+                        <p class="text-dark">
+                            Enhance your learning with mentorship & guidance designed around your schedule by our experienced Traders
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="350">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-group"></i></div>
+                        <h4><a href="">Psychology</a></h4>
+                        <p class="text-dark">
+                            Develop your mindset for sophisticatedresults with a newapproach to trade like a pro.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr style="background-color: rgba(255, 255, 255, 0.137); width: 60%;">
+
+    <section class="section-bg">
+        <div class="container " data-aos="zoom-in">
+
+            <div class="section-title  ">
+
+                <h3><span>DOKS</span> Daily Briefings – World of investing in just 5 minutes</h3>
+                <p>
+                    Our daily briefings are designed with most accurate financial data and analysis so you can Learn what’s happening in the world of investing in just 5 minutes. We select investing insights from the world’s top investing experts.
+                </p>
+                <button class="btn-orange mt-5 mb-0">Register Now</button>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Clients Section -->
+
+    <hr style="background-color: rgba(255, 255, 255, 0.137); width: 60%;">
+
+
+<section>
+    <div class="container" data-aos="fade-up">
+        <div class="form-group pl-lg-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-5 col-sm-12  text-center ">
+                    <img height="400px" class="ceo-dp m-auto" src="../../assets/img/team/t5.jpg">
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-12">
+                    <div class="text-center my-2">
+                        <h3 data-aos="fade-up" data-aos-delay="100"><span> CEO </span> Message</h3>
+                        <div class="d-flex">
+                            <img height="70" class="align-self-start" src="../../assets/img/quotat.png">
+                            <p class="py-5 font-light ">
+                                The payments market is undergoing radical transformation with diversifying consumer needs and the advances in technology. New technologies are accelerating the development of innovative payment solutions which will create brand new experiences for consumers.
+                                The payments industry is fulfilling an increasingly important role in economic development, and making payment solutions accessible to as many people as possible to broaden financial inclusion
+                            </p>
+
+                            <img style="transform:rotate(180deg);" class="align-self-end " height="70" src="../../assets/img/quotat.png">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Work proses Area -->
+</section>
+
+<hr style="background-color: rgba(255, 255, 255, 0.137); width: 60%;">
+
+
+    <!-- ======= webinar Section ======= -->
+    <section id="webinar" class="webinar section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Learn How to Trade</h2>
+                <h3>Upcoming Seminars & Webinars</h3>
+            </div>
+
+            <div class="row no-gutter">
+
+                <div class="col-lg-6 col-md-6  " data-aos="fade-up" data-aos-delay="200">
+                    <div class="box py-5">
+                        <h2>Webinars</h2> 
+                        <h5>Boost your trading with <br> DOKS's educational material</h5>
+                        <a href="#" class="btn-text ">Get Now</a>
+
+                    </div>
+                </div>
+
+             
+                <div class="col-lg-6 col-md-6  " data-aos="fade-up" data-aos-delay="200">
+                    <div class="box py-5">
+                        <h2>Seminars </h2> 
+                        <h5> Get world-class trading knowledge from <br> DOKS’s team of experts</h5>
+                        <a href="#" class="btn-text  ">Get Now</a>
+
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+    </section>
+    <!-- End Pricing Section -->
 
  
-    <!-- Start Support-service Area -->
-    <div class="support-service-area fix area-padding-2">
-        <div class="container">
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Packages</h2>
+                <h3>Check our <span>Packages</span></h3>
+                <p>#################################</p>
+            </div>
+
             <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="section-headline text-center">
-                        <h3 style="color: aliceblue;">What makes DOKS International Unique?</h3>
-                        <p style="color: aliceblue;">Most of the times you will see investing products and training focus on either fundamental or technical analysis. Our research shows the way to succeed in the market you need both to get the complete picture. We accomplish our mission by delivering actionable investing content, comprehensive tools, and educational resources to help you make smarter trading decisions.</p>
+
+                <div class="col-lg-4 col-md-6 p-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="box">
+                        <h3>Free##</h3>
+                        <h4><sup>$</sup>0<span> / month</span></h4>
+                        <ul>
+                            <li>Aida d##ere</li>
+                            <li>Nec feugiat nisl</li>
+                            <li>Nulla at volut##pat dola</li>
+                            <li class="na">Pha##retra massa</li>
+                            <li class="na">Massa## ultricies mi</li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-buy btn-transparent">Get Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6  p-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="box featured">
+                        <h3>Busine##ss</h3>
+                        <h4><sup>$</sup>19<span> / month</span></h4>
+                        <ul>
+                            <li>Aida de##re</li>
+                            <li>Nec fe##ugiat nisl</li>
+                            <li>Nulla## at volutpat dola</li>
+                            <li>Pharet##ra massa</li>
+                            <li class="na">Mas##sa ultricies mi</li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-buy">Get Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6  p-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="box">
+                        <span class="advanced">Advanced</span>
+                        <h3>Ultim##ate</h3>
+                        <h4><sup>$</sup>49<span> / month</span></h4>
+                        <ul>
+                            <li>Aida## dere</li>
+                            <li>Nec ##feugiat nisl</li>
+                            <li>Null##a at volutpat dola</li>
+                            <li>Phar##etra massa</li>
+                            <li>Massa ultricies mi</li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-buy">Get Now</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- End Pricing Section -->
+ 
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>F.A.Q</h2>
+                <h3>Some important <span>F.A.Q</span></h3>
+            </div>
+
+            <ul class="faq-list " data-aos="fade-up" data-aos-delay="100">
+                <li>
+                    <a data-toggle="collapse" class="collapsed" href="#faq1">
+                  What Are The Qualifications And Requirements I Should Have For This Training?
+                  <i class="icofont-simple-up"></i></a>
+                    <div id="faq1" class="collapse " data-parent=".faq-list">
+                        <p>
+                            Basically the requirement for this is your commitment and interest towards learning about the stock market. Apart from that you need to have Basic English knowledge and Basic computer knowledge. Our team has developed this content in a way that anybody
+                            can understand and we will be guiding you throughout the journey. Also you will be needing a laptop/Desktop or a mobile phone as this is a web based training.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" class="collapsed" href="#faq2">
+                      What Is The Duration Of This Training? What Do We Have To Learn About During This Training?
+                      <i class="icofont-simple-up"></i></a>
+                    <div id="faq2" class="collapse " data-parent=".faq-list">
+                        <p>
+                            Duration of training would be 2-3 months. We will be having 35 hours of theory sessions followed up by 15 hours of practical sessions. During theoretical sessions, we will be teaching about end to end understanding about the stock market. During the practical
+                            session, we will be guided to trade with paper money until you become fit to trade with real money. And most importantly we will be teaching you how to manage your money while you are trading and to develop trader’s mindset.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" class="collapsed" href="#faq3">
+                      How Much Can I Earn After Following This Training?
+                      <i class="icofont-simple-up"></i></a>
+                    <div id="faq3" class="collapse " data-parent=".faq-list">
+                        <p>
+                            First of all Stock trading is not a way of making quick money. In the initial stage we will be guiding you to obtain a profit around 10%-15% of your investment. It’s all depending on the effort that you are putting to understand. Stock trading is not
+                            a one time trade, but it’s a journey that you need to practice and learn. Once you understand the procedures, the profit margin can be improved.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" class="collapsed" href="#faq4">
+                      Don’t You Face Losses While Trading?
+                      <i class="icofont-simple-up"></i></a>
+                    <div id="faq4" class="collapse " data-parent=".faq-list">
+                        <p>
+                            Stock Trading is based on profits and losses. Every trader in this world faces losses. But we teach you how to minimize the losses and to understand a loss before it gets worse. Also once you take our training, you’ll be getting a free subscription until
+                            the end of this year of our market analyzing service. We will be providing you market analysis done by DOKS USA. Using this information you can minimize the losses while you are trading.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <a data-toggle="collapse" class="collapsed" href="#faq5">
+                      How Do I Join The Training?<i class="icofont-simple-up"></i></a>
+                    <div id="faq5" class="collapse " data-parent=".faq-list">
+                        <p>
+                            We will be enrolling students in 2 batches for a single month. Each batch would be consist of Maximum 50 students. First you will have to register on our website. Once you get registered, you will be having free content where you can learn more about
+                            the New York Stock Exchange as well as the training. While you are referring to the content one of our agents will contact you and guide you with the enrollment.</p>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+    <!-- End Frequently Asked Questions Section -->
+
+     
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact ">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Contact</h2>
+                <h3><span>Contact Us</span></h3>
+                <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+            </div>
+
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-6">
+                    <div class="info-box mb-4">
+                        <i class="bx bx-map"></i>
+                        <h3>Our Address</h3>
+                        <p>Level 05, East Low Block, World Trade Center, Colombo 01</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-box mb-4">
+                        <i class="bx bx-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p>info@doksinterational.com</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-box mb-4">
+                        <i class="bx bx-phone-call"></i>
+                        <h3>Call Us</h3>
+                        <p>+94 11 429 4747</p>
+                        <p>+94 11 429 4748</p>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="support-all">
-                    <!-- Start About -->
-                    <div class="col-md-6 col-sm-6 col-xs-12" >
-                        <div style="color: black; height: 270px;" class="support-services wow ">
-                            <a class="support-images" href="#"><i class="flaticon-023-management"></i></a>
-                            <div class="support-content">
-                                <h4>Proficiency</h4>
-                                <p>Our US and Global market research & analysis are done by professional traders and researchers.</p>
+
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="col-lg-6">
+                    <iframe class="mb-4 mb-lg-0" style="border-radius: 2rem;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                        frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+                </div>
+
+                <div class="col-lg-6" style="border-radius: 10px;">
+                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <div class="form-row">
+                            <div class="col form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please
+                  enter at least 4 chars" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="col form-group">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please
+                  enter a valid email" />
+                                <div class="validate"></div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Start About -->
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="support-services " style="height: 270px;">
-                            <a class="support-images" href="#"><i class="flaticon-036-security"></i></a>
-                            <div class="support-content">
-                                <h4>Trust</h4>
-                                <p>DOKS International is a company which holds the trust of clients over a decade in USA and now expanding its wings to Sri Lanka.</p>
-                            </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validate"></div>
                         </div>
-                    </div>
-                    <!-- Start services -->
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="support-services " style="height: 270px;">
-                            <a class="support-images" href="#"><i class="flaticon-003-approve"></i></a>
-                            <div class="support-content">
-                                <h4>Support</h4>
-                                <p>Weekly Trainings, Q & A sessions, live stream sessions, tips, and a customer care crew who’s passionate in assisting you!</p>
-                            </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <div class="validate"></div>
                         </div>
-                    </div>
-                    <!-- Start services -->
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="support-services" style="height: 270px;">
-                            <a class="support-images" href="#"><i class="flaticon-042-wallet"></i></a>
-                            <div class="support-content">
-                                <h4>Research</h4>
-                                <p>We offer timely, integrated analysis of companies, sectors, markets and economies, helping clients with their most critical decisions.</p>
-                            </div>
+                        <div class="mb-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
                         </div>
-                    </div>
-                    <!-- Start services -->
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="support-services " style="height: 270px;">
-                            <a class="support-images" href="#"><i class="flaticon-032-report"></i></a>
-                            <div class="support-content">
-                                <h4>Mentorship</h4>
-                                <p>Enhance your learning with mentorship & guidance designed around your schedule by our experienced Traders</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Start services -->
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="support-services" style="height: 270px;">
-                            <a class="support-images" href="#"><i class="flaticon-024-megaphone"></i></a>
-                            <div class="support-content">
-                                <h4>Psychology</h4>
-                                <p> Develop your mindset for sophisticatedresults with a newapproach to trade like a pro.</p>
-                            </div>
-                        </div>
-                    </div>
+                        <div class="text-center py-2"><button class="btn-orange" type="submit">Send Message</button></div>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Support-service Area -->
-    <!-- Start Self-area -->
-    <!-- <div class="self-area area-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="self-content">
-                        <h4>An investment multi-national firm is a invest money of one or more experts. Provides more profite, We help your satele to future life and then create the road. Grow Money speedly without any risk. </h4>
-                        <span class="talk-text">Alex ferneld, Co Founder</span>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="self-content">
-                        <h4>An investment multi-national firm is a invest money of one or more experts. Provides more profite, We help your satele to future life and then create the road. Grow Money speedly without any risk. </h4>
-                        <span class="talk-text">Alex ferneld, CEO</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- End Self-area -->
-   
-       <!-- Start Invest area -->
-       <!-- <div class="invest-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="section-headline text-center">
-                        <h3  style="color: aliceblue; padding-top: 50px;">Transform your Trading path through education</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                   
-                    <div class="container col-md-4 col-sm-6 col-xs-12">
-                        <div style="background-color: aliceblue;" class="pri_table_list">
-                            <div class="top-price-inner">
-                               <div class="rates">
-                                    <span class="prices">Beginner </span>
-                                </div>
-                                <span class="per-day">Free</span>
-                            </div>
-                            <ol class="pricing-text">
-                                <li class="check">Basics to E-Education</li>
-                                <li class="check">Live updates on news & events</li>
-                                <li class="check">Guide to Open Verified Accounts </li>
-                            </ol>
-                            <div class="price-btn blue">
-                                <a class="blue" href="#">Invest</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div style="background-color: aliceblue;" class="pri_table_list">
-                            <div class="top-price-inner">
-                               <span class="base">Popular</span>
-                               <div class="rates">
-                                    <span class="prices">Intermediate </span>
-                                </div>
-                                <span class="per-day"><a style="text-decoration: line-through;">250000</a> /150000</span>
-                            </div>
-                            <ol class="pricing-text">
-                                <li class="check">Basics to E-Education</li>
-                                <li class="check">Live updates on news & events</li>
-                                <li class="check">Guide to Open Verified Accounts </li>
-                            </ol>
-                            <div class="price-btn blue">
-                                <a class="blue" href="#">Invest</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div style="background-color: aliceblue;" class="pri_table_list">
-                            <span class="base">Best</span>
-                            <div class="top-price-inner">
-                               <div class="rates">
-                                    <span class="prices">Pro</span>
-                                </div>
-                                <span class="per-day">Contact Support</span>
-                            </div>
-                            <ol class="pricing-text">
-                                <li class="check">Basics to E-Education</li>
-                                <li class="check">Live updates on news & events</li>
-                                <li class="check">Guide to Open Verified Accounts </li>
-                            </ol>
-                            <div class="d-flex justify-content-center" >
-                                <div class="row price-btn blue" style="margin-right: auto; margin-left: auto;">
-                                    <a class="blue" href="#">Invest</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- End Invest area -->
+    </section>
+    <!-- End Contact Section -->
 
-    <!--Start payment-history area -->
-    <!--
-    <div class="payment-history-area bg-color fix area-padding-2">
-        <div class="container">
-           <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="section-headline text-center">
-                        <h3>Deposite and withdrawals history</h3>
-                        <p>Help agencies to define their new business objectives and then create professional software.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="deposite-content">
-                        <div class="diposite-box">
-                            <h4>Last deposite</h4>
-                            <span><i class="flaticon-005-savings"></i></span>
-                            <div class="deposite-table">
-                                <table>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Date</th>
-                                        <th>Amount</th>
-                                        <th>Currency</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Admond sayhel</td>
-                                        <td>Jan 02, 2020</td>
-                                        <td>$1000</td>
-                                        <td>Bitcoin</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jonshon</td>
-                                        <td>Dec 12, 2019</td>
-                                        <td>$5000</td>
-                                        <td>USD</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Hopper</td>
-                                        <td>Dec 22, 2019</td>
-                                        <td>$4000</td>
-                                        <td>Ripple</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Admond sayhel</td>
-                                        <td>Jan 02, 2020</td>
-                                        <td>$3000</td>
-                                        <td>Bitcoin</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Anjel july</td>
-                                        <td>Jan 05, 2020</td>
-                                        <td>$500</td>
-                                        <td>USD</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lagisha</td>
-                                        <td>Jan 12, 2020</td>
-                                        <td>$5000</td>
-                                        <td>Bitcoin</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="deposite-content">
-                        <div class="diposite-box">
-                            <h4>Last withdrawals</h4>
-                            <span><i class="flaticon-042-wallet"></i></span>
-                            <div class="deposite-table">
-                                <table>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Date</th>
-                                        <th>Amount</th>
-                                        <th>Currency</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Arnold</td>
-                                        <td>Jan 04, 2020</td>
-                                        <td>$1000</td>
-                                        <td>USD</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jhon Abra</td>
-                                        <td>Jan 07, 2020</td>
-                                        <td>$6000</td>
-                                        <td>USD</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lanisha</td>
-                                        <td>Jan 13, 2020</td>
-                                        <td>$5000</td>
-                                        <td>USD</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Gongales</td>
-                                        <td>Jan 12, 2020</td>
-                                        <td>$2000</td>
-                                        <td>USD</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Admond sayhel</td>
-                                        <td>Jan 10, 2020</td>
-                                        <td>$1000</td>
-                                        <td>USD</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Remond</td>
-                                        <td>Jan 02, 2020</td>
-                                        <td>$3000</td>
-                                        <td>USD</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
--->
-    <!-- End payment-history area -->
-    <!-- Start Banner Area -->
-    <div class="banner-area area-padding"  style="margin-top: 50px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="banner-all area-80 text-center">
-                        <div class="banner-content">
-                            <h3>DOKS Daily Briefings – World of investing in just 5 minutes</h3>
-                            <p style="color: aliceblue;">Our daily briefings are designed with most accurate financial data and analysis so you can Learn what’s happening in the world of investing in just 5 minutes. We select investing insights from the world’s top investing experts.</p>
-                            <a class="banner-btn" routerLink="/register">Sign up now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Gallery -->
-    <!-- <div class="container" style="margin-top: 100px;">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12  text-center">
-                <h2 style="color: #e2e4ec;">Our 10 years success story</h2>
-                <div style="width: 100%; height: 100%; text-align:center;margin-top:50px; padding:0;">
-                    <ng-image-slider #nav
-                        [images]="imageObject"
-                        [infinite]="true"
-                        [autoSlide]="1"
-                        
-                        slideImage="1"></ng-image-slider>
-                    </div>
-            </div>
-        </div>
-    </div> -->
-
-    
-   
-    <!-- Start reviews Area -->
-    <!-- <div class="reviews-area fix area-padding">
-        <div class="container">
-            <div class="row">
-                <div class="reviews-top">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="testimonial-inner">
-                            <div class="review-head">
-                                <h3 style="color: aliceblue;">Our customer say about our company work</h3>
-                                <p style="color: aliceblue;">The phrasal sequence of and commonplace that many DTP programmes can generate dummy. The phrasal sequence of the Lorem Ipsum text is now so widespread and commonplace that many DTP programmes can generate dummy</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-sm-8 col-xs-12">
-                        <div class="reviews-content" style="padding: 10px;">
-                            <carousel style="height:400px;"
-                                [cellWidth]="300">
-                                <div class="carousel-cell" style="width: 300px;">
-                                   
-                                    <div class="testi-text">
-                                        <div class="clients-text">
-                                            <div class="client-rating">
-                                                <a href="#"><i class="ti-star"></i></a>
-                                                <a href="#"><i class="ti-star"></i></a>
-                                                <a href="#"><i class="ti-star"></i></a>
-                                                <a href="#"><i class="ti-star"></i></a>
-                                                <a href="#"><i class="ti-star"></i></a>
-                                            </div>
-                                            <p>When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection. help agencies.</p>
-                                        </div>
-                                        <div class="testi-img ">
-                                            <img src="assets/img/review/1.jpg" alt="">
-                                            <div class="guest-details">
-                                                <h4 style="color: aliceblue;">Hamilton</h4>
-                                                <span style="color: aliceblue;" class="guest-rev">Clients - <a href="#">General customer</a></span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="carousel-cell" style="width: 300px;">
-                                   
-                                    <div class="testi-text">
-                                        <div class="clients-text">
-                                            <div class="client-rating">
-                                                <a href="#"><i class="ti-star"></i></a>
-                                                <a href="#"><i class="ti-star"></i></a>
-                                                <a href="#"><i class="ti-star"></i></a>
-                                                <a href="#"><i class="ti-star"></i></a>
-                                                <a href="#"><i class="ti-star"></i></a>
-                                            </div>
-                                            <p>When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection. help agencies.</p>
-                                        </div>
-                                        <div class="testi-img ">
-                                            <img src="assets/img/review/1.jpg" alt="">
-                                            <div class="guest-details">
-                                                <h4 style="color: aliceblue;">Hamilton</h4>
-                                                <span style="color: aliceblue;" class="guest-rev">Clients - <a href="#">General customer</a></span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="carousel-cell" style="width: 300px;">
-                                   
-                                    <div class="testi-text">
-                                        <div class="clients-text">
-                                            <div class="client-rating">
-                                                <a href="#"><i class="ti-star"></i></a>
-                                                <a href="#"><i class="ti-star"></i></a>
-                                                <a href="#"><i class="ti-star"></i></a>
-                                                <a href="#"><i class="ti-star"></i></a>
-                                                <a href="#"><i class="ti-star"></i></a>
-                                            </div>
-                                            <p>When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection. help agencies.</p>
-                                        </div>
-                                        <div class="testi-img ">
-                                            <img src="assets/img/review/1.jpg" alt="">
-                                            <div class="guest-details">
-                                                <h4 style="color: aliceblue;">Hamilton</h4>
-                                                <span style="color: aliceblue;" class="guest-rev">Clients - <a href="#">General customer</a></span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="carousel-cell" style="width: 300px;">
-                                   
-                                    <div class="testi-text">
-                                        <div class="clients-text">
-                                            <div class="client-rating">
-                                                <a href="#"><i class="ti-star"></i></a>
-                                                <a href="#"><i class="ti-star"></i></a>
-                                                <a href="#"><i class="ti-star"></i></a>
-                                                <a href="#"><i class="ti-star"></i></a>
-                                                <a href="#"><i class="ti-star"></i></a>
-                                            </div>
-                                            <p>When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection. help agencies.</p>
-                                        </div>
-                                        <div class="testi-img ">
-                                            <img src="assets/img/review/1.jpg" alt="">
-                                            <div class="guest-details">
-                                                <h4 style="color: aliceblue;">Hamilton</h4>
-                                                <span style="color: aliceblue;" class="guest-rev">Clients - <a href="#">General customer</a></span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </carousel>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- End reviews Area -->
-    <!-- Start FAQ area -->
-    <div class="faq-area bg-color area-padding" style="padding-top: 40px; padding-bottom: 50px; margin-bottom: 50px; margin-top: 50px;">
-        <div class="container"> 
-           <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="section-headline text-center">
-                        <h3>Some important FAQ</h3>
-                        <!-- <p>Help agencies to define their new business objectives and then create professional software.</p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Start Column Start -->
-                <div class="col-md-7 col-sm-6 col-xs-12">
-                    <div class="company-faq">
-                        <div class="faq-full">
-                            <div class="faq-details">
-                                <div class="panel-group" id="accordion">
-                                    <!-- Panel Default -->
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4 class="check-title">
-                                                <a data-toggle="collapse" class="active" data-parent="#accordion" href="#check1">
-                                                    <span class="acc-icons"></span> What are the qualifications and requirements I should have for this training?
-
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="check1" class="panel-collapse collapse in">
-                                            <div class="panel-body">
-                                                <p>
-                                                    Basically the requirement for this is your commitment and interest towards learning about the stock market. Apart from that you need to have Basic English knowledge and Basic computer knowledge. Our team has developed this content in a way that anybody can understand and we will be guiding you throughout the journey. Also you will be needing a laptop/Desktop or a mobile phone as this is a web based training.                                                </p>		
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Panel Default -->
-                                    <!-- Panel Default -->
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4 class="check-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#check2">
-                                                    <span class="acc-icons"></span>What is the duration of this training? What do we have to learn about during this training?
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="check2" class="panel-collapse collapse">
-                                            <div class="panel-body">
-                                                <p>
-                                                    Duration of training would be 2-3 months. We will be having 35 hours of theory sessions followed up by 15 hours of practical sessions. During theoretical sessions, we will be teaching about end to end understanding about the stock market. During the practical session, we will be guided to trade with paper money until you become fit to trade with real money. And most importantly we will be teaching you how to manage your money while you are trading and to develop trader’s mindset.
-                                                </p>										
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Panel Default -->
-                                    <!-- Panel Default -->
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4 class="check-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#check3">
-                                                    <span class="acc-icons"></span> How much can I earn after following this training? 
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="check3" class="panel-collapse collapse ">
-                                            <div class="panel-body">
-                                                <p>
-                                                    First of all Stock trading is not a way of making quick money. In the initial stage we will be guiding you to obtain a profit around 10%-15% of your investment. It’s all depending on the effort that you are putting to understand. Stock trading is not a one time trade, but it’s a journey that you need to practice and learn. Once you understand the procedures, the profit margin can be improved.
-                                                </p>	
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Panel Default -->	
-                                    <!-- Panel Default -->
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4 class="check-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#check4">
-                                                    <span class="acc-icons"></span>Don’t you face losses while trading?
-
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="check4" class="panel-collapse collapse ">
-                                            <div class="panel-body">
-                                                <p>
-                                                    Stock Trading is based on profits and losses. Every trader in this world faces losses. But we teach you how to minimize the losses and to understand a loss before it gets worse. Also once you take our training, you’ll be getting a free subscription until the end of this year of our market analyzing service. We will be providing you market analysis done by DOKS USA. Using this information you can minimize the losses while you are trading.
-                                                </p>	
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Panel Default -->
-                                    <!-- Panel Default -->
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4 class="check-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#check5">
-                                                    <span class="acc-icons"></span>How do I join the Training?
-
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="check5" class="panel-collapse collapse">
-                                            <div class="panel-body">
-                                                <p>
-                                                    We will be enrolling students in 2 batches for a single month. Each batch would be consist of Maximum 50 students. First you will have to register on our website. Once you get registered, you will be having free content where you can learn more about the New York Stock Exchange as well as the training. While you are referring to the content one of our agents will contact you and guide you with the enrollment.
-                                                </p>										
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Panel Default -->										
-                                </div>
-                            </div>
-                            <!-- End FAQ -->
-                        </div>
-                    </div>
-                </div>
-                <!-- End Column -->
-                <!-- <div class="col-md-5 col-sm-6 col-xs-12">
-                    <div class="faq-content">
-                        <h4>Have any qustion?</h4>
-                        <div class="faq-quote">
-                            <div class="row">
-                                <form id="contactForm" method="POST" action="http://rockstheme.com/rocks/aievari-live/contact.php" class="contact-form">
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <input type="text" id="name" class="form-control" placeholder="Name" required data-error="Please enter your name">
-                                        <div class="help-block with-errors"></div>
-                                        <input type="email" class="email form-control" id="email" placeholder="Email" required data-error="Please enter your email">
-                                        <div class="help-block with-errors"></div>
-                                        <input type="text" id="msg_subject" class="form-control" placeholder="Subject" required="" data-error="Please enter your message subject">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <textarea id="message" rows="7" placeholder="Massage" class="form-control" required data-error="Write your message"></textarea>
-                                        <div class="help-block with-errors"></div>
-                                        <button type="submit" id="submit" class="quote-btn">Submit</button>
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div> 
-                                        <div class="clearfix"></div>
-                                    </div>   
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- End Column -->
-            </div>
-        </div>
-    </div>
-    <!-- End FAQ area -->
-   
-    
-    <!-- all js here -->
-    <script src="../../assets/js/owl.carousel.min.js"></script>
-</div>
+</main>
+<!-- End #main -->

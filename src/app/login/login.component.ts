@@ -7,9 +7,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  register: { FirstName: any,LastName: any,Email: any,Phone: any,Comments: any  };
+ 
+  constructor() {   
+
+    this.register = {
+      FirstName : "",
+      LastName : "",
+      Email : "",
+      Phone : "",
+      Comments : ""
+    }
+  }
 
   ngOnInit(): void {
+  }
+
+  public setTab1( ){
+  document.getElementById('registration').style.display = "block";   
+    document.getElementById('login').style.display = "none";   
+     document.getElementById('tab-btn-1').classList.add('selected')  ;
+     document.getElementById('tab-btn-2').classList.remove('selected')  ;
+  
+  }
+
+  public setTab2( ){
+  document.getElementById('registration').style.display = "none";    
+    document.getElementById('login').style.display = "block";   
+    document.getElementById('tab-btn-2').classList.add('selected')  ;
+    document.getElementById('tab-btn-1').classList.remove('selected')  ;
   }
 
 }
