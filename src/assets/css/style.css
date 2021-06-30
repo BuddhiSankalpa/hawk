@@ -38,9 +38,10 @@ h6 {
     font-family: "Roboto", sans-serif;
 }
 
-p{
+p {
     opacity: 0.8;
 }
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -248,7 +249,6 @@ p{
 #header .btn-orange {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
-  
     font-size: 14px;
     letter-spacing: 1px;
     display: inline-block;
@@ -334,9 +334,9 @@ p{
 --------------------------------------------------------------*/
 
 .header .btn-orange {
-    font-family: 'Raleway', sans-serif;  font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
-   
     font-size: 14px;
     letter-spacing: 1px;
     display: inline-block;
@@ -559,15 +559,14 @@ p{
     color: #e7e7e7;
     padding: 20px 20px;
     font-weight: 600;
-    outline: none;  
-border-bottom:solid 1px rgb(61, 61, 61);
-}  
+    outline: none;
+    border-bottom: solid 1px rgb(61, 61, 61);
+}
 
- 
 .mobile-nav .btn-orange {
-    font-family: 'Raleway', sans-serif;  font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
-  
     font-size: 20px;
     letter-spacing: 1px;
     display: inline-block;
@@ -579,13 +578,12 @@ border-bottom:solid 1px rgb(61, 61, 61);
     background: #E6922E;
     margin-top: 50px;
 }
- 
+
 .mobile-nav .btn-orange:hover {
     background: #fff;
     color: #E6922E;
     font-weight: 900;
 }
-
 
 .mobile-nav a:hover,
 .mobile-nav .active>a,
@@ -767,8 +765,10 @@ border-bottom:solid 1px rgb(61, 61, 61);
     font-weight: 400;
 }
 
-#hero .btn-get-started {    font-family: 'Raleway', sans-serif;  font-weight: 700;
-    text-transform: uppercase; 
+#hero .btn-get-started {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1px;
     display: inline-block;
@@ -887,7 +887,8 @@ section {
 }
 
 .section-title .btn-orange {
-    font-family: 'Raleway', sans-serif;  font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
     font-size: 20px;
     letter-spacing: 1px;
@@ -933,7 +934,7 @@ section {
 }
 
 .section-title p {
-    margin: 15px auto 0 auto; 
+    margin: 15px auto 0 auto;
 }
 
 @media (min-width: 1024px) {
@@ -1035,8 +1036,9 @@ section {
 }
 
 .featured-services .icon-box:hover::before {
-    background: #001b3e;
+    background: #e6922e;
     top: 0;
+    color: #fff !important;
     border-radius: 0px;
 }
 
@@ -1058,7 +1060,7 @@ section {
 .featured-services .icon i {
     font-size: 50px;
     line-height: 1;
-    color: #106eea;
+    color: #e6922e;
     transition: all 0.3s ease-in-out;
 }
 
@@ -1080,11 +1082,11 @@ section {
 
 .featured-services .icon-box:hover .title,
 .featured-services .icon-box:hover .description {
-    color: #fdb054;
+    color: #ffffff;
 }
 
 .featured-services .icon-box:hover .icon i {
-    color: #e6922e;
+    color: #ffffff;
 }
 
 
@@ -1212,7 +1214,7 @@ section {
 .counts .count-box p {
     padding: 0;
     margin: 0;
-    font-family: 'Raleway', sans-serif;  
+    font-family: 'Raleway', sans-serif;
     font-size: 14px;
 }
 
@@ -1256,26 +1258,19 @@ section {
     background: #fff;
     border-radius: 0.2rem;
     margin-bottom: 20px;
+ border-radius: 0.4rem;
+
 }
 
-.services .icon-box .icon {
-    margin: 0 auto;
-    width: 64px;
-    height: 64px;
-    background: #f1f6fe;
-    border-radius: 4px;
-    border: 1px solid #deebfd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.services .icon {
     margin-bottom: 20px;
-    transition: ease-in-out 0.2s;
 }
 
-.services .icon-box .icon i {
-    color: #3b8af2;
-    font-size: 28px;
-    transition: ease-in-out 0.2s;
+.services .icon i {
+    font-size: 50px;
+    line-height: 1;
+    color: #e6922e;
+    transition: all 0.3s ease-in-out;
 }
 
 .services .icon-box h4 {
@@ -1307,19 +1302,19 @@ section {
 
 .services .icon-box:hover {
     border-color: #fff;
-    box-shadow: 0px 0 25px 0 rgba(16, 110, 234, 0.1);
-    border-radius: 2rem;
+    box-shadow:  0px 0px 11px 7px rgb(230 146 46);
+ border-radius: 1rem;
 }
 
 .services .icon-box:hover h4 a,
 .services .icon-box:hover .icon i {
-    color: #106eea;
+    color: #001b3d;
 }
 
 .services .icon-box:hover .icon {
-    border-color: #106eea;
+    border-color: #106eea; 
 }
-
+ 
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -1731,7 +1726,7 @@ section {
 
 .webinar .box h5 {
     font-weight: 400;
-    padding: 20px 15px; 
+    padding: 20px 15px;
     color: #ffbf48;
 }
 
@@ -1752,14 +1747,14 @@ section {
     font-size: 16px;
     padding: 10px 50px;
     font-weight: 500;
-    font-family: 'Raleway', sans-serif;   
+    font-family: 'Raleway', sans-serif;
     font-weight: 600;
     transition: 0.3s;
 }
 
 .webinar .box:hover {
     color: #fff !important;
-    margin : 10px ;
+    margin: 10px;
 }
 
 .webinar .box:hover h5,
@@ -1769,9 +1764,9 @@ section {
 
 .webinar .box:hover .btn-text {
     background: #fff;
-   background: #fff; 
     background: #fff;
-   background: #fff; 
+    background: #fff;
+    background: #fff;
     background: #fff;
     color: #ffa600;
 }
@@ -1807,8 +1802,7 @@ section {
 .p-card:hover {
     transition: 300ms !important;
     cursor: pointer;
-    padding: 5px ;
-
+    padding: 5px;
 }
 
 .pricing .box {
@@ -1891,7 +1885,8 @@ section {
     transition: none;
     font-size: 14px;
     padding: 10px 50px;
-    font-family: 'Raleway', sans-serif;  font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
     font-weight: 600;
     transition: 0.1s;
 }
@@ -1976,7 +1971,7 @@ section {
 }
 
 .registration .btn-orange {
-    font-family: 'Raleway', sans-serif;   
+    font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1px;
@@ -2194,8 +2189,9 @@ section {
 }
 
 #contact .btn-orange {
-    font-family: 'Raleway', sans-serif;  font-weight: 700;
-    text-transform: uppercase; 
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1px;
     display: inline-block;
@@ -2306,7 +2302,7 @@ input {
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 0;
-    font-family: 'Raleway', sans-serif;   
+    font-family: 'Raleway', sans-serif;
     color: #777777;
 }
 
