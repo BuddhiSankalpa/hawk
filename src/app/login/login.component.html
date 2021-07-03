@@ -9,74 +9,82 @@
 
                 <div class=" d-flex tab-header ">
 
-                    <div id="tab-btn-1" (click)="setTab1( )" class="col-6 text-center p-3  tab-btn selected  tab-btn-start">Registration</div>
-                    <div id="tab-btn-2" (click)="setTab2( )" class="col-6 text-center p-3  tab-btn  tab-btn-end">Login</div>
+                    <div id="tab-btn-1" (click)="setTab1()" class="col-6 text-center p-3  tab-btn selected  tab-btn-start">Registration</div>
+                    <div id="tab-btn-2" (click)="setTab2()" class="col-6 text-center p-3  tab-btn selected  tab-btn-start">Verification</div>
+                    <div id="tab-btn-3" (click)="setTab3()" class="col-6 text-center p-3  tab-btn  tab-btn-end">Login</div>
                 </div>
 
                 <div class="mt-3 p-3">
                     <div class=" py-5 " id="login" style="display: none;">
-                        <form #f="ngForm">
+                        <form #f="ngForm" [formGroup]="loginForm" (submit)="login()">
                             <br>
                             <br>
                             <div class="form-group">
                                 <div class="col-12  ">
-                                    <input placeholder="Email" class="form-control" matInput minlength="3" name="email" #email="ngModel" [required]="email" ngModel [(ngModel)]="register.FirstName">
+                                    <input type="text" id="name" class="form-control" placeholder="Email" formControlName="email">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="col-12">
-                                    <input placeholder="Password" class="form-control" matInput minlength="3" type="password" name="password" #password="ngModel" [required]="password" ngModel [(ngModel)]="register.LastName">
+                                    <input type="password" id="msg_subject" class="form-control" placeholder="Password" formControlName="password">
                                 </div>
                             </div>
                             <br>
                             <div lass="form-group ">
                                 <div class="text-center w-100">
-                                    <button class="btn-orange btn btn-block w-25" [disabled]="!f.valid" #submitBtn>Login</button>
+                                    <button class="btn-orange btn btn-block w-25" [disabled]="!loginForm.valid" #submitBtn>Login</button>
                                 </div>
                             </div>
 
                         </form>
                     </div>
                     <div id="registration" style="display: block;">
-                        <form #f="ngForm">
+                        <form #f="ngForm" [formGroup]="registerForm" (submit)="register()">
 
                             <div class="form-group">
                                 <div class="col-12">
-                                    <input placeholder="First Name" class="form-control" matInput minlength="3" name="FirstName" #FirstName="ngModel" [required]="FirstName" ngModel [(ngModel)]="register.FirstName">
+                                    <input type="text" id="fname" class="form-control" placeholder="First Name" formControlName="firstName">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="col-12">
-                                    <input placeholder="Last Name" class="form-control" matInput minlength="3" name="LastName" #LastName="ngModel" [required]="LastName" ngModel [(ngModel)]="register.LastName">
+                                    <input type="text" id="lname" class="form-control" placeholder="Last Name" formControlName="lastName">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="col-12">
-                                    <input placeholder="Email" class="form-control" matInput minlength="3" name="Email" #Email="ngModel" [required]="Email" ngModel [(ngModel)]="register.Email">
+                                    <input type="email" id="email" class="form-control" placeholder="Email" formControlName="email">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="col-12">
-                                    <input placeholder="Phone" class="form-control" matInput minlength="9" type="number" name="Phone" #Phone="ngModel" [required]="Phone" ngModel [(ngModel)]="register.Phone">
+                                    <input type="text" id="phone" class="form-control" placeholder="Phone" formControlName="phone">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="col-12">
-                                    <textarea placeholder="Comments" class="form-control" matInput ngModel name="Comments" [(ngModel)]="register.Comments"></textarea>
+                                    <input type="password" id="password" class="form-control" placeholder="Password" formControlName="password">
                                 </div>
                             </div>
+
+                            <div class="form-group">
+                                <div class="col-12">
+                                    <input type="password" id="repassword" class="form-control" placeholder="Reenter Password" formControlName="repassword">
+                                </div>
+                            </div>
+
 
                             <br>
 
                             <div class="form-group px-3">
                                 <div class="form-row">
                                     <div class="col-auto">
-                                        <input type="checkbox">
+                                        <input type="checkbox" formControlName="terms">
                                     </div>
                                     <p class="col-11  pl-0  text-left text-muted" style="font-size:x-small;">
                                         By clicking here I give my consent for DOKS to contact me for marketing purposes. You can opt out at any time.
@@ -87,10 +95,34 @@
 
                             <div lass="form-group ">
                                 <div class="text-center w-100">
-                                    <button class="btn-orange btn btn-block w-25" [disabled]="!f.valid" #submitBtn>Submit</button>
+                                    <button class="btn-orange btn btn-block w-25" [disabled]="!registerForm.valid" #submitBtn>Submit</button>
                                 </div>
                             </div>
 
+                        </form> 
+                    </div>
+                    <div id="verification" style="display: block;">
+                        <form #f="ngForm" [formGroup]="verificationForm" (submit)="verify()">
+                            <br>
+                            <br>
+                            <div class="form-group">
+                                <div class="col-12  ">
+                                    <input type="text" id="name" class="form-control" placeholder="Email" formControlName="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-12  ">
+                                    <input type="text" id="code" class="form-control" placeholder="Verification Code" formControlName="code">
+                                </div>
+                            </div>
+                        
+                            <br>
+                            <div lass="form-group ">
+                                <div class="text-center w-100">
+                                    <button class="btn-orange btn btn-block w-25" [disabled]="!verificationForm.valid" #submitBtn>Verify</button>
+                                </div>
+                            </div>
+                        
                         </form>
                     </div>
                 </div>
@@ -98,3 +130,4 @@
         </div>
     </div>
 </section>
+

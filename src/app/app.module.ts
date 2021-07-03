@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser'; 
-import {MatTabsModule} from '@angular/material/tabs'; 
-import { FormsModule } from '@angular/forms';
+import {MatTabsModule} from '@angular/material/tabs';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,7 +47,10 @@ import { NewsFeedsComponent } from './news-feeds/news-feeds.component';
     BrowserAnimationsModule,
     MatTabsModule,
     FormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
+    HttpClientModule
     
   ],
   providers: [],
