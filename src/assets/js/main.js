@@ -125,11 +125,19 @@
         $(".home-carousel").owlCarousel({
             loop: true,
             autoplay: true,
-            autoplaySpeed: 1100,
+            autoplaySpeed: 1500,
             dots: true,
             items: 1
         });
-
+        setTimeout(() => { 
+        // Stock details
+        $(".stocks-feed").owlCarousel({
+            loop: true,
+            autoplay: true,
+            dots: true,
+            items:1  
+        });
+        }, 1000);
         // Init AOS
         function aos_init() {
             AOS.init({

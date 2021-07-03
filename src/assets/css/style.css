@@ -1306,7 +1306,7 @@ section {
  border-radius: 1rem;
 }
 
-.services .icon-box:hover h4 a,
+.services .icon-box:hover h4 a,Testimonial
 .services .icon-box:hover .icon i {
     color: #001b3d;
 }
@@ -1419,6 +1419,93 @@ section {
 
 @media (min-width: 992px) {
     .testimonials .testimonial-item p {
+        width: 80%;
+    }
+}
+
+/*--------------------------------------------------------------
+# Stocks
+--------------------------------------------------------------*/
+
+.Stocks {
+    padding: 20px 0;  
+    background-color: rgb(0, 1, 12); 
+}
+
+.stocks-up:after{
+    content: url("../img/icons/up-arrow.svg"); position: absolute;
+    top: 3x;
+    left: 20px;
+}
+
+.stocks-down:after{
+    content: url("../img/icons/down-arrow.svg"); position: absolute;
+    top: 3x;
+    left:20px;
+}
+.Stocks .Stock-item {
+    text-align: center;
+    color: #fff;
+}
+
+.Stocks .Stock-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    color: #fff;
+}
+
+.Stocks .Stock-item h4 {
+    font-size: 14px;
+    color: #ddd;
+    margin: 0 0 15px 0;
+}
+
+.Stocks .Stock-item .quote-icon-left,
+.Stocks .Stock-item .quote-icon-right {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 26px;
+}
+
+.Stocks .Stock-item .quote-icon-left {
+    display: inline-block;
+    left: -5px;
+    position: relative;
+}
+ 
+.Stocks .Stock-item p {
+    font-style: italic;
+    margin: 0 auto 15px auto;
+    color: #eee;
+}
+
+.Stocks .owl-nav,
+.Stocks .owl-dots {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.Stocks .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.Stocks .owl-dot.active {
+    background-color: #106eea !important;
+}
+
+@media (min-width: 1024px) {
+    .Stocks {
+        background-attachment: fixed;
+    }
+}
+
+@media (min-width: 992px) {
+    .Stocks .Stock-item p {
         width: 80%;
     }
 }
