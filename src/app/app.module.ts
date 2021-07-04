@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {MatTabsModule} from '@angular/material/tabs'; 
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +24,7 @@ import { HeaderComponent } from './header/header.component';
 import { TopbarComponent } from './topbar/topbar.component'; 
 import { Header2Component } from './header2/header2.component';
 import { NewsFeedsComponent } from './news-feeds/news-feeds.component';
+import { StocksBannerComponent } from './stocks-banner/stocks-banner.component';
 
 
 
@@ -36,14 +38,14 @@ import { NewsFeedsComponent } from './news-feeds/news-feeds.component';
     ContactComponent,
     FooterComponent,
     HeaderComponent,
-    TopbarComponent,  Header2Component, NewsFeedsComponent
+    TopbarComponent,  Header2Component, NewsFeedsComponent, StocksBannerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     IvyCarouselModule,
     NgImageSliderModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule,HttpClientModule,
     MatTabsModule,
     FormsModule,
     MatFormFieldModule
