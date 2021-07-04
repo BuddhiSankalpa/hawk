@@ -1,21 +1,18 @@
 <app-header2></app-header2> 
-<!-- <app-news-feeds ></app-news-feeds> -->
 <section class="m-auto mt-lg-5 account-banner ">
-    <div class="row align-items-center  mt-5  ">
-        <div class="col-lg-7  px-md-5 col-sm-12 text-center d-none d-lg-block d-md-block">-</div>
+    <div class="row  mt-5  ">
+        <div class="col-lg-7  px-md-5 col-sm-12 text-center d-none d-lg-block d-md-block"></div>
         <div class="col-lg-4  px-md-5 col-sm-12 text-center "   >
-            <p>Sign up with DOKS. in a few minutes</p>
+            <p style="color: white;font-weight: 600;">Sign up with DOKS. in a few minutes</p>
             <div class="registration bg-white">
 
-                <div class=" d-flex tab-header ">
-
-                    <div id="tab-btn-1" (click)="setTab1()" class="col-6 text-center p-3  tab-btn selected  tab-btn-start">Registration</div>
-                    <div id="tab-btn-2" (click)="setTab2()" class="col-6 text-center p-3  tab-btn selected  tab-btn-start">Verification</div>
-                    <div id="tab-btn-3" (click)="setTab3()" class="col-6 text-center p-3  tab-btn  tab-btn-end">Login</div>
+                <div class="d-flex tab-header"> 
+                    <div id="tab-btn-1" (click)="setTab1()" class="col-6 text-center p-3 tab-btn tab-btn-start selected">Registration</div>
+                    <div id="tab-btn-2" (click)="setTab2()" class="col-6 text-center p-3 tab-btn tab-btn-start">Login</div> 
                 </div>
 
-                <div class="mt-3 p-3">
-                    <div class=" py-5 " id="login" style="display: none;">
+                <div class="mt-3  pb-5">
+                    <div class="py-3" id="login" style="display: none;">
                         <form #f="ngForm" [formGroup]="loginForm" (submit)="login()">
                             <br>
                             <br>
@@ -25,10 +22,12 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group text-left">
                                 <div class="col-12">
-                                    <input type="password" id="msg_subject" class="form-control" placeholder="Password" formControlName="password">
+                                    <input  [type]="showPass1.checked ? 'text' : 'password'"  id="msg_subject" class="form-control" placeholder="Password" formControlName="password">
                                 </div>
+                                <input type="checkbox" #showPass1 (change)="0" class="ml-4" >  Show Password <small class="text-muted"></small>
+
                             </div>
                             <br>
                             <div lass="form-group ">
@@ -62,31 +61,33 @@
 
                             <div class="form-group">
                                 <div class="col-12">
-                                    <input type="text" id="phone" class="form-control" placeholder="Phone" formControlName="phone">
+                                    <input type="phone" id="phone" class="form-control" placeholder="Phone" formControlName="phone">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="col-12">
-                                    <input type="password" id="password" class="form-control" placeholder="Password" formControlName="password">
+                                    <input [type]="showPass.checked ? 'text' : 'password'" id="password" class="form-control" placeholder="Password" formControlName="password">
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group text-left">
                                 <div class="col-12">
-                                    <input type="password" id="repassword" class="form-control" placeholder="Reenter Password" formControlName="repassword">
-                                </div>
-                            </div>
+                                    <input [type]="showPass.checked ? 'text' : 'password'" id="repassword" class="form-control" placeholder="Re-enter Password" formControlName="repassword">
+                                    <input type="checkbox" #showPass (change)="0" class="ml-2" >  Show Password <small class="text-muted"></small>
+                                </div> 
+                               
+                            </div> 
 
 
                             <br>
 
                             <div class="form-group px-3">
                                 <div class="form-row">
-                                    <div class="col-auto">
-                                        <input type="checkbox" formControlName="terms">
+                                    <div class="col-auto mx-2">
+                                        <input type="checkbox" style="    transform: scale(1.5);" formControlName="terms">
                                     </div>
-                                    <p class="col-11  pl-0  text-left text-muted" style="font-size:x-small;">
+                                    <p class="col-11  pl-0  text-left text-muted" style="font-size:small;">
                                         By clicking here I give my consent for DOKS to contact me for marketing purposes. You can opt out at any time.
                                     </p>
                                 </div>
@@ -101,18 +102,18 @@
 
                         </form> 
                     </div>
-                    <div id="verification" style="display: block;">
+                    <div id="verification" style="display: none;">
                         <form #f="ngForm" [formGroup]="verificationForm" (submit)="verify()">
                             <br>
                             <br>
                             <div class="form-group">
                                 <div class="col-12  ">
-                                    <input type="text" id="name" class="form-control" placeholder="Email" formControlName="email">
+                                    <input type="text" id="v-mail" class="form-control" placeholder="Email" formControlName="email">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-12  ">
-                                    <input type="text" id="code" class="form-control" placeholder="Verification Code" formControlName="code">
+                                    <input type="text" style="font-weight: 600;" id="v-code" class="form-control" placeholder="Verification Code" formControlName="code">
                                 </div>
                             </div>
                         

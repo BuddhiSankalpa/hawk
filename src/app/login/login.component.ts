@@ -9,11 +9,10 @@ import { ApiService } from '../services/api-service.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  //register: { FirstName: any,LastName: any,Email: any,Phone: any,Comments: any  };
 
   loginForm: FormGroup;
   registerForm: FormGroup;
-  verificationForm:FormGroup;
+  verificationForm: FormGroup;
   user: any;
 
   constructor(private toastr: ToastrService, private api: ApiService) {}
@@ -39,6 +38,7 @@ export class LoginComponent implements OnInit {
       email: new FormControl('', Validators.email),
       code: new FormControl('', Validators.required),
     });
+
   }
 
   public setTab1() {
@@ -47,39 +47,31 @@ export class LoginComponent implements OnInit {
     document.getElementById('login').style.display = 'none';
 
     document.getElementById('tab-btn-1').classList.add('selected');
-    document.getElementById('tab-btn-2').classList.remove('selected');
-    document.getElementById('tab-btn-3').classList.remove('selected');
+    document.getElementById('tab-btn-2').classList.remove('selected'); 
 
   }
 
   public setTab2() {
     document.getElementById('registration').style.display = 'none';
-    document.getElementById('verification').style.display = 'block';
-    document.getElementById('login').style.display = 'none';
-
-    if(this.user){
-      this.verificationForm.controls.email.patchValue(this.user);
-    }
-
-    document.getElementById('tab-btn-1').classList.remove('selected');
-    document.getElementById('tab-btn-2').classList.add('selected');
-    document.getElementById('tab-btn-3').classList.remove('selected');
-
-  }
-
-  public setTab3() {
-    document.getElementById('registration').style.display = 'none';
     document.getElementById('verification').style.display = 'none';
-    document.getElementById('login').style.display = 'block';
+    document.getElementById('login').style.display = 'block'; 
 
     if(this.user){
       this.loginForm.controls.email.patchValue(this.user);
     }
 
     document.getElementById('tab-btn-1').classList.remove('selected');
-    document.getElementById('tab-btn-2').classList.remove('selected');
-    document.getElementById('tab-btn-3').classList.add('selected');
+    document.getElementById('tab-btn-2').classList.add('selected'); 
 
+  }
+
+  public setTab3() {
+    document.getElementById('registration').style.display = 'none';
+    document.getElementById('verification').style.display = 'block';
+ 
+    if(this.user){
+      this.verificationForm.controls.email.patchValue(this.registerForm.value.email);
+    }
   }
 
   login() {
@@ -126,6 +118,7 @@ export class LoginComponent implements OnInit {
           if(res.status){
             this.user = this.registerForm.value.email;
             this.toastr.success(msg);
+            this.setTab3();
           }else{
             this.toastr.error(msg);
           }
@@ -146,6 +139,9 @@ export class LoginComponent implements OnInit {
           let msg = res.message;
           if(res.status){
             this.toastr.success(msg);
+            this.registerForm.reset();
+            this.verificationForm.reset();
+            this.setTab2();
           }else{
             this.toastr.error(msg);
           }

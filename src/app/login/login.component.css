@@ -14,10 +14,5 @@ input[type=number] {
   background-image: url('../../assets/img/background/account.jpg');
   background-repeat: no-repeat;
   background-size: cover; 
-}
-
-.registration{
-  height: 550px;
-  filter:none;
-
+background-position: top;
 }
