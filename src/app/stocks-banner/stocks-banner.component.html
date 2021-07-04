@@ -1,42 +1,42 @@
-<section class="Stocks text-center">
-    <div class="container" data-aos="fade-up">
-        <div class="owl-carousel stocks-feed mb-0 pb-0 text-white px-2">
+<section class="Stocks text-center pb-1 ">
+    <div class="container " data-aos="fade-up">
+        <div class="owl-carousel stocks-feed my-0 py-0 text-white ">
             <div *ngFor="let item of stkData;">
 
-                <div class="Stock-item d-flex justify-content-between">
+                <div class="Stock-item d-flex m-auto justify-content-center">
 
-                    <div class="px-lg-3 px-md-2 px-sm-1">
-                        <h5 class="my-3 d-flex"><span>
-                                <img *ngIf="getStatusUp(item['open'] , item['close'] ) "
+                    <div class="px-2 px-lg-5 px-md-2 px-xs-1 ">
+                        <h5 class="my-3 d-flex "><span>
+                                <img *ngIf="getStatusUp(item['open'] , item['close'] ) " class="blink_"
                                     height="15" style="display: inline-block;"
                                     src="../../assets/img/icons/up-arrow.svg"
                                     alt="">
-                                <img *ngIf="getStatusDown(item['open'] , item['close'] )"
+                                <img *ngIf="getStatusDown(item['open'] , item['close'] )" class="blink_"
                                     height="15" style="display: inline-block;"
                                     src="../../assets/img/icons/down-arrow.svg"
                                     alt="">
                             </span>{{ item['symbol'] }}</h5>
                     </div>
-                    <div class="px-lg-3 px-md-2 px-sm-1">
-                        <div class="row text-center">
+                    <div class="px-2 px-lg-5 px-sm-4 px-xs-1">
+                        <div class="  text-center">
                             <p class="mb-1"><strong>OPEN</strong></p>
                             <p>{{ item['open'] }}</p>
                         </div>
                     </div>
-                    <div class="px-lg-3 px-md-2 px-sm-1">
-                        <div class="row text-center">
+                    <div class="px-2 px-lg-5 px-sm-4 px-xs-1">
+                        <div class="  text-center">
                             <p class="mb-1"> <strong>HIGH</strong></p>
                             <p>{{ item['high'] }} </p>
                         </div>
                     </div>
-                    <div class="px-lg-3 px-md-2 px-sm-1">
-                        <div class="row text-center">
+                    <div class="px-2 px-lg-5 px-sm-4 px-xs-1">
+                        <div class="  text-center">
                             <p class="mb-1"> <strong>LOW</strong></p><p>{{
                                 item['low'] }}</p>
                         </div>
                     </div>
-                    <div class="px-lg-3 px-md-2 px-sm-1">
-                        <div class="row text-center">
+                    <div class="px-2 px-lg-5 px-sm-4 px-xs-1">
+                        <div class="  text-center">
                             <p class="mb-1"> <strong>CLOSE</strong></p><p>{{
                                 item['close'] }}</p>
                         </div>

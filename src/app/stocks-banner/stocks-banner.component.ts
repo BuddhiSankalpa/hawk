@@ -16,8 +16,9 @@ export class StocksBannerComponent implements OnInit {
     console.log("Fetching Stock data")
 
     var token = "d4ccea666b59b2528c22f4fee70626f2";
+    var symbol = "MSFT,TSLA";
 
-    this.http.get<JSON>("http://api.marketstack.com/v1/eod/latest?access_key="+token+"&symbols=MSFT,AMZN,TSLA,FB,AAPL,SY,BA,GOOG,NVDA")
+    this.http.get<JSON>("http://api.marketstack.com/v1/eod/latest?access_key="+token+"&symbols="+symbol)
     .subscribe((data) => {
 
         if(data['data'].length != 0){
