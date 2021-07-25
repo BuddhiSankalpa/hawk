@@ -127,7 +127,7 @@
             autoplay: true,
             autoplaySpeed: 1500,
             dots: true,
-            items: 1
+            items: 1,
         });
         setTimeout(() => { 
         // Stock details

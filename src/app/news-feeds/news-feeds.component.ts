@@ -10,7 +10,7 @@ export class NewsFeedsComponent implements OnInit {
   newsfeed:string; 
 
   constructor() {
-    this.newsfeed = "Registration Opens on 07th July.. Stay tuned.....";
+    this.newsfeed = "Registration Opens on 03rd August.. Stay tuned.....";
   
    }
 

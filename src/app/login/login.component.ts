@@ -152,4 +152,8 @@ export class LoginComponent implements OnInit {
       }
     );
   }
+
+  loadPopUp(){
+    document.getElementById('myBtn').style.display = 'block';
+  }
 }

@@ -11,8 +11,8 @@ input[type=number] {
 }
 
 .account-banner{
-  background-image: url('../../assets/img/background/account.jpg');
+  background-image: url('../../assets/img/background/Login_Screen.png');
   background-repeat: no-repeat;
   background-size: cover; 
-background-position: top;
+  background-position: top;
 }
