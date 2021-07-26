@@ -21,4 +21,8 @@ export class ApiService{
   verify(email: any, verificationCode: any):Observable<any>{
     return this.http.post(`${baseUrl}/verify?email=${email}&verificationCode=${verificationCode}`,{});
   }
+
+  getNewsLine() : Observable<any>{
+    return this.http.get(`${baseUrl}/news/getAll`);
+  }
 }

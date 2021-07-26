@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { ApiService } from '../services/api-service.service';
 
 @Component({
   selector: 'app-news-feeds',
@@ -7,14 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsFeedsComponent implements OnInit {
 
-  newsfeed:string; 
+  newsfeed:string = "";
 
-  constructor() {
-    this.newsfeed = "Registration Opens on 03rd August.. Stay tuned.....";
-  
-   }
-
-  ngOnInit(): void {
+  constructor(private api: ApiService,
+    private toastr: ToastrService) {
   }
 
+  ngOnInit(): void {
+    this.api.getNewsLine().subscribe(res =>{
+      if(res && res[0] && res[0].data){
+        let dataSet = JSON.parse(res[0].data);
+        dataSet.forEach(element => {
+          this.newsfeed = this.newsfeed + element + "....             ";
+        });
+      }
+    });
+  }
 }
