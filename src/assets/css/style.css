@@ -1312,9 +1312,9 @@ section {
 }
 
 .services .icon-box:hover .icon {
-    border-color: #106eea; 
+    border-color: #106eea;
 }
- 
+
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -1428,8 +1428,8 @@ section {
 --------------------------------------------------------------*/
 
 .Stocks {
-    padding: 20px 0;  
-    background-color: rgb(0, 2, 26);  
+    padding: 20px 0;
+    background-color: rgb(0, 2, 26);
     position: sticky;
 }
 
@@ -1473,7 +1473,7 @@ section {
     left: -5px;
     position: relative;
 }
- 
+
 .Stocks .Stock-item p {
     font-style: italic;
     margin: 0 auto 15px auto;
@@ -2482,4 +2482,161 @@ input {
         text-align: center;
         padding: 2px 0;
     }
+}
+
+
+/*--------------------------------------------------------------
+# education Services
+--------------------------------------------------------------*/
+
+.main-edu {
+    margin-top: 50px;
+}
+
+.main-edu .card {
+    border: none;
+}
+
+.education-services .icon-box {
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    background: rgba(106, 106, 106, 0.939);
+    box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    z-index: 1;
+    color: #eeeeeed7;
+    text-align: center;
+}
+
+.education-services .icon-box::before {
+    content: '';
+    position: absolute;
+    background: #cbe0fb;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 100%;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.education-services .icon-box:hover::before {
+    background: #e6922e;
+    top: 0;
+    color: #fff !important;
+    border-radius: 0px;
+}
+
+.education-services h6 {
+    font-weight: 400;
+    padding-bottom: 20px;
+    color: rgb(255 255 255);
+}
+
+.education-services h1 {
+    padding-bottom: px;
+    color: rgb(223, 223, 223);
+}
+
+.education-services .icon {
+    margin-bottom: 20px;
+}
+
+.education-services .icon i {
+    font-size: 50px;
+    line-height: 1;
+    color: #e6922e;
+    transition: all 0.3s ease-in-out;
+}
+
+.education-services .title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.education-services .title a {
+    color: #111;
+}
+
+.education-services .description {
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 0;
+}
+
+.education-services .icon-box:hover .title,
+.education-services .icon-box:hover .description {
+    color: #ffffff;
+}
+
+.education-services .icon-box:hover .icon i {
+    color: #ffffff;
+}
+
+.education {
+    border-radius: 13px;
+    transition-duration: 700ms;
+}
+
+.education .tab-header {
+    border-radius: 13px 13px 0 0;
+    background-color: #e6e6e6;
+    color: #838383 !important;
+}
+
+.education .tab-btn {
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 0 0 0;
+}
+
+.education .tab-btn-start {
+    border-radius: 10px 0 0 0;
+}
+
+.education .tab-btn-end {
+    border-radius: 0 10px 0 0;
+}
+
+.education .tab-btn.selected {
+    border-radius: 10px 10px 0 0;
+    font-weight: 500;
+    color: #04001b;
+    background-color: #ffffff;
+}
+
+.education .tab-btn-end:hover {
+    color: #fff;
+    cursor: pointer;
+    background-color: #ffa600;
+    border-radius: 0 10px 0 0;
+}
+
+.education .tab-btn-start:hover {
+    color: #fff;
+    cursor: pointer;
+    background-color: #ffa600;
+    border-radius: 10px 0 0 0;
+}
+
+.education .btn-orange {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 50rem;
+    border: none;
+    transition-duration: 100ms;
+    color: #ffffff;
+    background: #E6922E;
+    box-shadow: 1px 1px 5px #0016335b;
+}
+
+.education .btn-orange:disabled {
+    opacity: 0.5
 }

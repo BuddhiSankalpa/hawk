@@ -1,7 +1,71 @@
-<app-header2></app-header2> 
+<app-topbar>
+</app-topbar>
 
-<section class="m-auto mt-lg-5 account-banner ">
-    <div class="row  mt-5  ">
-        
+<app-header2></app-header2>
+
+
+
+<main id="main" class="main-edu">
+    <section class="education-services">
+        <div class="container section" data-aos="fade-up">
+            <div class="text-center my-2 section-title">
+                <h3 data-aos="fade-up" data-aos-delay="100">Become a Pro Trader with
+                    <span> DOKS </span>
+                </h3>
+                <br>
+
+                <h6 class="m-auto">
+                    Trade as a pro with DOKS. We will awake the Super Trader within you with proper guidance, education, Live market updates, financial news, and streaming services.
+                </h6>
+
+            </div>
+            <div class="education bg-white">
+
+                <div class="d-flex tab-header">
+                    <div id="tab-btn-1" (click)="setTab1()" class="col-6 text-centerp-3 tab-btn tab-btn-start selected">BEGINNER</div>
+                    <div id="tab-btn-2" (click)="setTab2()" class="col-6 text-centerp-3 tab-btn tab-btn-end">ADVANCE</div>
+                </div>
+
+                <div class="row p-5" style="display: flex;" id="beginner">
+
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <h4 class="title"> Beginer Learning </h4>
+                            <p class="description">We employ best people and invest in advanced and cutting-edge technologies to ensure that our students learn effectively and acquire the fundamental and technical skills for consistency in theirtrading.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <h4 class="title"> Beginer Learning </h4>
+                            <p class="description">We employ best p s to ensure that our students learn effectively and acquire the fundamental and technical skills for consistency in theirtrading.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row p-5" style="display: none;" id="advance">
+
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <h4 class="title"> Advance Learning </h4>
+                            <p class="description">We employ best peop logies to ensure that our students learn effectively and acquire the fundamental and technical skills for consistency in theirtrading.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <h4 class="title"> Advance Learning </h4>
+                            <p class="description">We employ best people and invest in advanced and cutting-edge technologies to ensure that our students learn effectively and acquire the fundamental and technical skills for consistency in theirtrading.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        </section>
+    </section>
+</main>
