@@ -26,6 +26,7 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { Header2Component } from './header2/header2.component';
 import { NewsFeedsComponent } from './news-feeds/news-feeds.component';
 import { StocksBannerComponent } from './stocks-banner/stocks-banner.component';
+import { EducationComponent } from './education/education.component';
  
 
 @NgModule({
@@ -38,7 +39,7 @@ import { StocksBannerComponent } from './stocks-banner/stocks-banner.component';
     ContactComponent,
     FooterComponent,
     HeaderComponent,
-    TopbarComponent,  Header2Component, NewsFeedsComponent, StocksBannerComponent
+    TopbarComponent,  Header2Component, NewsFeedsComponent, StocksBannerComponent, EducationComponent
   ],
   imports: [
     BrowserModule,
