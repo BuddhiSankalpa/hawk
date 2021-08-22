@@ -125,7 +125,7 @@
         $(".home-carousel").owlCarousel({
             loop: true,
             autoplay: true,
-            autoplaySpeed: 1500,
+            autoplaySpeed: 2000,
             dots: true,
             items: 1,
         });

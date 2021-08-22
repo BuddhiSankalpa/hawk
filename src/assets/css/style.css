@@ -2501,12 +2501,12 @@ input {
     padding: 30px;
     position: relative;
     overflow: hidden;
-    background: rgba(106, 106, 106, 0.939);
+    background: rgba(255, 255, 255, 0.939);
     box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
     transition: all 0.3s ease-in-out;
     border-radius: 8px;
     z-index: 1;
-    color: #eeeeeed7;
+    color: #646464;
     text-align: center;
 }
 
@@ -2527,6 +2527,11 @@ input {
     top: 0;
     color: #fff !important;
     border-radius: 0px;
+}
+
+.education-services h4 {
+    color: rgb(0, 0, 0);
+    font-size: x-large;
 }
 
 .education-services h6 {
