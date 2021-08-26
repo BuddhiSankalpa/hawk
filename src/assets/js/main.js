@@ -87,7 +87,7 @@
                 }
             });
         });
- 
+
 
         // Toggle .header-scrolled class to #header when page is scrolled
         $(window).scroll(function() {
@@ -121,21 +121,32 @@
             return false;
         });
 
-        // Portfolio details carousel
-        $(".home-carousel").owlCarousel({
+        // // Portfolio details carousel
+        // $(".home-carousel").owlCarousel({
+        //     loop: true,
+        //     autoplay: true,
+        //     autoplaySpeed: 2000,
+        //     dots: true,
+        //     items: 1,
+        // });
+
+        new Swiper('.home-slider', {
+            speed: 600,
             loop: true,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            dots: true,
-            items: 1,
-        });
-        setTimeout(() => { 
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: false
+            },
+            slidesPerView: 'auto'
+          });
+
+        setTimeout(() => {
         // Stock details
         $(".stocks-feed").owlCarousel({
             loop: true,
             autoplay: true,
             dots: true,
-            items:1  
+            items:1
         });
         }, 1000);
         // Init AOS
