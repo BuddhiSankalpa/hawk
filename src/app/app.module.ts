@@ -27,6 +27,7 @@ import { Header2Component } from './header2/header2.component';
 import { NewsFeedsComponent } from './news-feeds/news-feeds.component';
 import { StocksBannerComponent } from './stocks-banner/stocks-banner.component';
 import { EducationComponent } from './education/education.component';
+import { PostLoginComponent } from './post-login/post-login.component';
  
 
 @NgModule({
@@ -39,7 +40,7 @@ import { EducationComponent } from './education/education.component';
     ContactComponent,
     FooterComponent,
     HeaderComponent,
-    TopbarComponent,  Header2Component, NewsFeedsComponent, StocksBannerComponent, EducationComponent
+    TopbarComponent,  Header2Component, NewsFeedsComponent, StocksBannerComponent, EducationComponent, PostLoginComponent
   ],
   imports: [
     BrowserModule,

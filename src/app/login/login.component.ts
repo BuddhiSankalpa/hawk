@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ApiService } from '../services/api-service.service';
 
@@ -15,7 +16,10 @@ export class LoginComponent implements OnInit {
   verificationForm: FormGroup;
   user: any;
 
-  constructor(private toastr: ToastrService, private api: ApiService) {}
+  constructor(private toastr: ToastrService, 
+    private api: ApiService,
+    private _router: Router
+    ) {}
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
@@ -83,6 +87,9 @@ export class LoginComponent implements OnInit {
             let msg = res.message;
             if(res.status){
               this.toastr.success(msg);
+              console.log("suces");
+              
+              this._router.navigateByUrl('/portal')
             }else{
               this.toastr.error(msg);
             }

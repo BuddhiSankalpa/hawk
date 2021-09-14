@@ -6,9 +6,9 @@ export const environment = {
   production: false
 };
 
-export const baseUrl = 'https://doks-admin.et.r.appspot.com';
+// export const baseUrl = 'https://doks-admin.et.r.appspot.com';
 
-//export const baseUrl = 'http://localhost:8080';
+export const baseUrl = 'https://backend.doksinternational.com';
 
 /*
  * For easier debugging in development mode, you can import the following file
