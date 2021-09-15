@@ -1,3 +1,86 @@
 .form-group {
     color: black !important
   }
+
+/*--------------------------------------------------------------
+# webinar
+#041334
+#ffa600
+--------------------------------------------------------------*/
+
+.webinarLogin .box {
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 4px rgba(12, 11, 11, 0.12);
+  border-radius: 2rem;
+  background-color: #fafafa;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  margin: 20px;
+}
+
+.webinarLogin .box h5 {
+  font-weight: 400;
+  padding: 20px 15px;
+  color: #041334;
+}
+
+.webinarLogin .box h2 {
+  font-size: 36px;
+  color: #041334;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+}
+
+.webinarLogin .btn-text {
+  display: inline-block;
+  padding: 8px 35px 10px 35px;
+  border-radius: 50px;
+  color: #041334;
+  border: solid 1px #041334;
+  font-size: 16px;
+  padding: 10px 50px;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.webinarLogin .box:hover {
+  color: #fff !important;
+  margin: 10px;
+}
+
+.webinarLogin .box:hover h5,
+.webinarLogin .box:hover h2 {
+  color: #ffa600;
+}
+
+.webinarLogin .box:hover .btn-text {
+  background: #ffa600;
+  background: #fff;
+  background: #fff;
+  background: #fff;
+  background: #fff;
+  color: #ffa600;
+}
+
+.webinarLogin .featured h3 {
+  color: #fff;
+  background: #ffa600;
+}
+
+.webinarLogin .advanced {
+  width: 200px;
+  position: absolute;
+  top: 18px;
+  right: -68px;
+  transform: rotate(45deg);
+  z-index: 1;
+  font-size: 14px;
+  padding: 1px 0 3px 0;
+  background: #ea9e10;
+  color: #fff;
+}
