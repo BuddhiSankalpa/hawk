@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { EducationComponent } from './education/education.component';
 import { PostLoginComponent } from './post-login/post-login.component';
+import { NewsComponent } from './news/news.component';
 
 const routes: Routes = [
   { path: 'account', component: LoginComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   // { path: 'about', component: AboutComponent },
   { path: '', component: HomeComponent },
   { path: 'education', component: EducationComponent },
+  { path: 'news', component: NewsComponent },
   { path: 'portal', component: PostLoginComponent }
 ];
 
