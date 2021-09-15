@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-post-login',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostLoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router, private toastr: ToastrService) { }
 
   ngOnInit(): void {
+  }
+
+  logout = () => {
+    this.toastr.warning('Logout Success!');
+    sessionStorage.clear();
+    this.router.navigate(['/account']);
   }
 
 }
