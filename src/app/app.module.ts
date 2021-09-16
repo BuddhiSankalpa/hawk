@@ -5,7 +5,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // @ts-ignore
 import { ToastrModule } from 'ngx-toastr';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +29,9 @@ import { StocksBannerComponent } from './stocks-banner/stocks-banner.component';
 import { EducationComponent } from './education/education.component';
 import { PostLoginComponent } from './post-login/post-login.component';
 import { NewsComponent } from './news/news.component';
+import { AuthGuard } from './auth/auth.guard';
+import { AuthService } from './auth/auth.service';
+import { AuthInterceptor } from './auth/auth.interceptor';
  
 
 @NgModule({
@@ -56,7 +59,14 @@ import { NewsComponent } from './news/news.component';
     ToastrModule.forRoot(),
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+     AuthGuard,
+     AuthService,
+     {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
-import { Router, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
 import { EducationComponent } from './education/education.component';
 import { PostLoginComponent } from './post-login/post-login.component';
 import { NewsComponent } from './news/news.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   { path: 'account', component: LoginComponent },
@@ -16,7 +15,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'education', component: EducationComponent },
   { path: 'news', component: NewsComponent },
-  { path: 'portal', component: PostLoginComponent }
+  { path: 'portal',canActivate:[AuthGuard], component: PostLoginComponent }
 ];
 
 @NgModule({

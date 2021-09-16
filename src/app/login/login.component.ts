@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private toastr: ToastrService, 
     private api: ApiService,
-    private _router: Router
+    public router: Router
     ) {}
 
   ngOnInit(): void {
@@ -87,9 +87,9 @@ export class LoginComponent implements OnInit {
             let msg = res.message;
             if(res.status){
               this.toastr.success(msg);
-              console.log("suces");
               
-              this._router.navigateByUrl('/portal')
+              sessionStorage.setItem('doks-webapp-token', res.token);
+              this.router.navigateByUrl('/portal');
             }else{
               this.toastr.error(msg);
             }
