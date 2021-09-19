@@ -19,5 +19,9 @@ export class PostLoginComponent implements OnInit {
     sessionStorage.clear();
     this.router.navigate(['/account']);
   }
+  payment = () => {
+    this.toastr.warning('Contact Helpdesk!');
+    sessionStorage.clear();
+  }
 
 }
