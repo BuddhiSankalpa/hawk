@@ -78,6 +78,15 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  public verificationCode(){
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('verification').style.display = 'block';
+ 
+    if(this.user){
+      this.verificationForm.controls.email.patchValue(this.registerForm.value.email);
+    }
+  }
+
   login() {
     this.api
       .login(this.loginForm.value.email, this.loginForm.value.password)
@@ -162,5 +171,9 @@ export class LoginComponent implements OnInit {
 
   loadPopUp(){
     document.getElementById('myBtn').style.display = 'block';
+  }
+  return_verification(){
+    console.log("test")
+    this.verificationCode();
   }
 }
