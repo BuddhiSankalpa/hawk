@@ -1842,7 +1842,7 @@ section {
 
 .webinar .box:hover {
     color: #fff !important;
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 .webinar .box:hover h5,
