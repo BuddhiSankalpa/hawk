@@ -38,6 +38,9 @@
                             <div class="mt-2" >
                                 <a href="javascript: void(0);" (click)="return_verification()">Click here to enter Verification Code</a>
                             </div>
+                            <div class="mt-2" >
+                                <a href="javascript: void(0);" (click)="forget()">Click here to Reset Password</a>
+                            </div>
 
                         </form>
                     </div>
@@ -124,6 +127,25 @@
                             <div lass="form-group ">
                                 <div class="text-center w-100">
                                     <button class="btn-orange btn btn-block w-25" [disabled]="!verificationForm.valid" #submitBtn>Verify</button>
+                                </div>
+                            </div>
+                        
+                        </form>
+                    </div>
+                    <div id="forgetPW" style="display: none;">
+                        <form #f="ngForm" [formGroup]="forgetPWForm" (submit)="forget()">
+                            <br>
+                            <br>
+                            <div class="form-group">
+                                <div class="col-12  ">
+                                    <input type="text" id="v-mail" class="form-control" placeholder="Email" formControlName="email">
+                                </div>
+                            </div>
+                        
+                            <br>
+                            <div lass="form-group ">
+                                <div class="text-center w-100">
+                                    <button class="btn-orange btn btn-block w-25" [disabled]="!forgetPWForm.valid" #submitBtn>Reset</button>
                                 </div>
                             </div>
                         

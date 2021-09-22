@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   registerForm: FormGroup;
   verificationForm: FormGroup;
+  forgetPWForm: FormGroup;
   user: any;
 
   constructor(private toastr: ToastrService, 
@@ -42,6 +43,9 @@ export class LoginComponent implements OnInit {
       email: new FormControl('', Validators.email),
       code: new FormControl('', Validators.required),
     });
+    this.forgetPWForm = new FormGroup({
+      email: new FormControl('', Validators.email),
+    });
 
   }
 
@@ -49,7 +53,8 @@ export class LoginComponent implements OnInit {
     document.getElementById('registration').style.display = 'block';
     document.getElementById('verification').style.display = 'none';
     document.getElementById('login').style.display = 'none';
-
+    document.getElementById('forgetPW').style.display = 'none';
+    
     document.getElementById('tab-btn-1').classList.add('selected');
     document.getElementById('tab-btn-2').classList.remove('selected'); 
 
@@ -59,7 +64,7 @@ export class LoginComponent implements OnInit {
     document.getElementById('registration').style.display = 'none';
     document.getElementById('verification').style.display = 'none';
     document.getElementById('login').style.display = 'block'; 
-
+    document.getElementById('forgetPW').style.display = 'none';
     if(this.user){
       this.loginForm.controls.email.patchValue(this.user);
     }
@@ -72,10 +77,14 @@ export class LoginComponent implements OnInit {
   public setTab3() {
     document.getElementById('registration').style.display = 'none';
     document.getElementById('verification').style.display = 'block';
- 
+    document.getElementById('forgetPW').style.display = 'none';
     if(this.user){
       this.verificationForm.controls.email.patchValue(this.registerForm.value.email);
     }
+  }
+  public setTab4() {
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('forgetPW').style.display = 'block';
   }
 
   public verificationCode(){
@@ -173,7 +182,9 @@ export class LoginComponent implements OnInit {
     document.getElementById('myBtn').style.display = 'block';
   }
   return_verification(){
-    console.log("test")
     this.verificationCode();
+  }
+  forget(){
+    this.setTab4();
   }
 }
