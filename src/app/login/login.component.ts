@@ -10,24 +10,24 @@ import { ApiService } from '../services/api-service.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-
   loginForm: FormGroup;
   registerForm: FormGroup;
   verificationForm: FormGroup;
   forgetPWForm: FormGroup;
   user: any;
 
-  constructor(private toastr: ToastrService, 
+  constructor(
+    private toastr: ToastrService,
     private api: ApiService,
     public router: Router
-    ) {}
+  ) {}
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
       firstName: new FormControl('', Validators.required),
       lastName: new FormControl('', Validators.required),
       phone: new FormControl('', Validators.required),
-      email: new FormControl('', Validators.email),
+      email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', Validators.required),
       repassword: new FormControl('', Validators.required),
       //userType: new FormControl('', Validators.required),
@@ -35,18 +35,17 @@ export class LoginComponent implements OnInit {
     });
 
     this.loginForm = new FormGroup({
-      email: new FormControl('', Validators.email),
+      email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', Validators.required),
     });
 
     this.verificationForm = new FormGroup({
-      email: new FormControl('', Validators.email),
+      email: new FormControl('', [Validators.required, Validators.email]),
       code: new FormControl('', Validators.required),
     });
     this.forgetPWForm = new FormGroup({
-      email: new FormControl('', Validators.email),
+      email: new FormControl(null, [Validators.required, Validators.email]),
     });
-
   }
 
   public setTab1() {
@@ -54,32 +53,32 @@ export class LoginComponent implements OnInit {
     document.getElementById('verification').style.display = 'none';
     document.getElementById('login').style.display = 'none';
     document.getElementById('forgetPW').style.display = 'none';
-    
-    document.getElementById('tab-btn-1').classList.add('selected');
-    document.getElementById('tab-btn-2').classList.remove('selected'); 
 
+    document.getElementById('tab-btn-1').classList.add('selected');
+    document.getElementById('tab-btn-2').classList.remove('selected');
   }
 
   public setTab2() {
     document.getElementById('registration').style.display = 'none';
     document.getElementById('verification').style.display = 'none';
-    document.getElementById('login').style.display = 'block'; 
+    document.getElementById('login').style.display = 'block';
     document.getElementById('forgetPW').style.display = 'none';
-    if(this.user){
+    if (this.user) {
       this.loginForm.controls.email.patchValue(this.user);
     }
 
     document.getElementById('tab-btn-1').classList.remove('selected');
-    document.getElementById('tab-btn-2').classList.add('selected'); 
-
+    document.getElementById('tab-btn-2').classList.add('selected');
   }
 
   public setTab3() {
     document.getElementById('registration').style.display = 'none';
     document.getElementById('verification').style.display = 'block';
     document.getElementById('forgetPW').style.display = 'none';
-    if(this.user){
-      this.verificationForm.controls.email.patchValue(this.registerForm.value.email);
+    if (this.user) {
+      this.verificationForm.controls.email.patchValue(
+        this.registerForm.value.email
+      );
     }
   }
   public setTab4() {
@@ -87,12 +86,14 @@ export class LoginComponent implements OnInit {
     document.getElementById('forgetPW').style.display = 'block';
   }
 
-  public verificationCode(){
+  public verificationCode() {
     document.getElementById('login').style.display = 'none';
     document.getElementById('verification').style.display = 'block';
- 
-    if(this.user){
-      this.verificationForm.controls.email.patchValue(this.registerForm.value.email);
+
+    if (this.user) {
+      this.verificationForm.controls.email.patchValue(
+        this.registerForm.value.email
+      );
     }
   }
 
@@ -103,12 +104,12 @@ export class LoginComponent implements OnInit {
         (res) => {
           if (res) {
             let msg = res.message;
-            if(res.status){
+            if (res.status) {
               this.toastr.success(msg);
-              
+
               sessionStorage.setItem('doks-webapp-token', res.token);
               this.router.navigateByUrl('/portal');
-            }else{
+            } else {
               this.toastr.error(msg);
             }
           }
@@ -140,11 +141,11 @@ export class LoginComponent implements OnInit {
       (res) => {
         if (res) {
           let msg = res.message;
-          if(res.status){
+          if (res.status) {
             this.user = this.registerForm.value.email;
             this.toastr.success(msg);
             this.setTab3();
-          }else{
+          } else {
             this.toastr.error(msg);
           }
         }
@@ -155,36 +156,59 @@ export class LoginComponent implements OnInit {
     );
   }
 
-  verify(){
+  verify() {
     this.api
-    .verify(this.verificationForm.value.email, this.verificationForm.value.code)
-    .subscribe(
+      .verify(
+        this.verificationForm.value.email,
+        this.verificationForm.value.code
+      )
+      .subscribe(
+        (res) => {
+          if (res) {
+            let msg = res.message;
+            if (res.status) {
+              this.toastr.success(msg);
+              this.registerForm.reset();
+              this.verificationForm.reset();
+              this.setTab2();
+            } else {
+              this.toastr.error(msg);
+            }
+          }
+        },
+        () => {
+          this.toastr.error('Verification Failed!');
+        }
+      );
+  }
+
+  reset() {
+    this.api.reset(this.forgetPWForm.value.email).subscribe(
       (res) => {
         if (res) {
           let msg = res.message;
-          if(res.status){
+          if (res.status) {
             this.toastr.success(msg);
-            this.registerForm.reset();
-            this.verificationForm.reset();
+            this.loginForm.reset();
             this.setTab2();
-          }else{
+          } else {
             this.toastr.error(msg);
           }
         }
       },
       () => {
-        this.toastr.error('Verification Failed!');
+        this.toastr.error('Password Reset Failed!');
       }
     );
   }
 
-  loadPopUp(){
+  loadPopUp() {
     document.getElementById('myBtn').style.display = 'block';
   }
-  return_verification(){
+  return_verification() {
     this.verificationCode();
   }
-  forget(){
+  forget() {
     this.setTab4();
   }
 }

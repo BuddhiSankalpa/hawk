@@ -362,9 +362,12 @@
                             <a href="javascript: void(0);"class="btn-text ">Get Now</a>
     
                         </div>
-                        <div class="box flip-card-back">
-                            <h5>Webinar will be conducted on topic (topic) on (date) at (time).</h5>
-                            <h5><a href="">Click here to join with the session</a></h5>
+                        <div class="box flip-card-back" *ngIf="announcementObj['webinar']">
+                            <h5>{{ "Webinar will be conducted on topic " + announcementObj['webinar']['topic'] + " on "+ announcementObj['webinar']['date'] + " at " + announcementObj['webinar']['time'] +"."}}</h5>
+                            <h5><a href="{{announcementObj['webinar']['description']}}">Click here to join with the session</a></h5>
+                        </div>
+                        <div class="box flip-card-back" *ngIf="!announcementObj['webinar']">
+                            <h5>No Saved webinars!</h5>
                         </div>
                     </div>
                 </div>
@@ -377,9 +380,12 @@
                             <a href="javascript: void(0);" class="btn-text ">Get Now</a>
     
                         </div>
-                        <div class="box flip-card-back">
-                            <h5>Webinar will be conducted on topic (topic) on (date) at (time).</h5>
-                            <h5><a href="">Click here to join with the session</a></h5>
+                        <div class="box flip-card-back" *ngIf="announcementObj['seminar']">
+                            <h5>{{ "Webinar will be conducted on topic " + announcementObj['seminar']['topic'] + " on "+ announcementObj['seminar']['date'] + " at " + announcementObj['seminar']['time'] +"."}}</h5>
+                            <h5><a href="{{announcementObj['seminar']['description']}}">Click here to join with the session</a></h5>
+                        </div>
+                        <div class="box flip-card-back" *ngIf="!announcementObj['seminar']">
+                            <h5>No Saved webinars!</h5>
                         </div>
                     </div>
                 </div>

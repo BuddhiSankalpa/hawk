@@ -1,5 +1,6 @@
 import { Component, OnInit  } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { ApiService } from '../services/api-service.service';
 
 
 @Component({
@@ -20,7 +21,9 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class HomeComponent implements OnInit {
 
-  // constructor() { }
+  constructor(private api: ApiService) { 
+    this.getAnnouncements();
+  }
 
   // ngOnInit(): void {
   // }
@@ -71,6 +74,26 @@ state = 0;
 
 scrollDone() {
   this.state++;
+}
+
+announcementObj: any = {};
+getAnnouncements() {
+  this.api.getAnnouncements().subscribe(res => {
+    if(res){
+      let webinar = res.find(a => a.type == 1);
+
+      if(webinar){
+        this.announcementObj['webinar'] = Object.assign(webinar);
+      }
+
+      let seminar = res.find(a => a.type == 2);
+
+      if(seminar){
+        this.announcementObj['seminar'] = Object.assign(seminar);
+      }
+
+    }
+  });
 }
 
 }

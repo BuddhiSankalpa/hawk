@@ -22,7 +22,15 @@ export class ApiService{
     return this.http.post(`${baseUrl}/auth/verify?email=${email}&verificationCode=${verificationCode}`,{});
   }
 
+  reset(email: any):Observable<any>{
+    return this.http.post(`${baseUrl}/auth/reset?email=${email}`,{});
+  }
+
   getNewsLine() : Observable<any>{
     return this.http.get(`${baseUrl}/announcements/news/getAll`);
+  }
+
+  getAnnouncements() : Observable<any>{
+    return this.http.get(`${baseUrl}/announcements/webinars/getAll`);
   }
 }

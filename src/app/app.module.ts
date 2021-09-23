@@ -31,6 +31,8 @@ import { NewsComponent } from './news/news.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthService } from './auth/auth.service';
 import { AuthInterceptor } from './auth/auth.interceptor';
+import { EditProfileComponent } from './post-login/edit-profile/edit-profile.component';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
  
 
 @NgModule({
@@ -42,7 +44,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     ContactComponent,
     FooterComponent,
     HeaderComponent,
-    TopbarComponent,  Header2Component, NewsFeedsComponent, StocksBannerComponent, EducationComponent, PostLoginComponent, NewsComponent
+    TopbarComponent,  Header2Component, NewsFeedsComponent, StocksBannerComponent, EducationComponent, PostLoginComponent, NewsComponent, EditProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +60,8 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     HttpClientModule
   ],
   providers: [
+     BsModalService, 
+     BsModalRef,
      AuthGuard,
      AuthService,
      {
