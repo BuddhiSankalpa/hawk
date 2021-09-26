@@ -24,7 +24,10 @@ export class HomeComponent implements OnInit {
 
   // ngOnInit(): void {
   // }
+
+  ngOnInit() { 
  
+  } 
   imageObject = [{
     image: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/5.jpg',
     thumbImage: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/5.jpg',
