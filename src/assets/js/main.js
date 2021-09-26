@@ -159,7 +159,8 @@
         aos_init();
     });
 
-    // Mobile Navigation
+    setTimeout(() => {
+     // Mobile Navigation
     if ($('.nav-menu').length) {
         var $mobile_nav = $('.nav-menu').clone().prop({
             class: 'mobile-nav d-lg-none'
@@ -193,4 +194,6 @@
     } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
         $(".mobile-nav, .mobile-nav-toggle").hide();
     }
+    }, 100);
+
 })(jQuery);
