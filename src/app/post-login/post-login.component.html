@@ -20,9 +20,6 @@
             <ul>
                 <li><button  class="btn-orange btn btn-block" (click)="payment()">Payment</button></li>
             </ul>
-            <ul>
-                <li><button  class="btn-orange btn btn-block" (click)="logout()">Logout</button></li>
-            </ul>
         </div>
         </nav>
 
@@ -32,6 +29,7 @@
             <img src="https://cdn0.iconfinder.com/data/icons/avatars-3/512/avatar_hipster_guy-512.png">
             <div class="dropdown-content">
               <button (click)="editProfile()">Edit Profile</button>
+              <button (click)="logout()">Logout</button>
             </div>
           </div>
               </div>
@@ -93,7 +91,10 @@
                                     <h5><a href="{{announcementObj['webinar']['description']}}">Click here to join with the session</a></h5>
                                 </div>
                                 <div class="box flip-card-back" *ngIf="!announcementObj['webinar']">
-                                    <h5>No Saved webinars!</h5>
+                                    <h5>Our new webinar series will be announced soon. Stay tuned for more exciting information. 
+                                        <br><br>
+                                        We are glad that you are interested in Doks International. You can register with us for more exciting information on how to Trade Real Stock in the New York Stock Exchange.
+                                        </h5>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +113,10 @@
                                     <h5><a href="{{announcementObj['seminar']['description']}}">Click here to join with the session</a></h5>
                                 </div>
                                 <div class="box flip-card-back" *ngIf="!announcementObj['seminar']">
-                                    <h5>No Saved webinars!</h5>
+                                    <h5>Unfortunately, There are no upcoming Seminars taking place at this moment  due to this prevailing situation. 
+                                        <br><br>
+                                    We are glad that you are interested in Doks International. You can register with us for more exciting information on how to Trade Real Stock in the New York Stock Exchange.
+                                    </h5>
                                 </div>
                             </div>
                         </div>

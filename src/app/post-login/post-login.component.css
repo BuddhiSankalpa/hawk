@@ -114,6 +114,7 @@
   text-decoration: none;
   display: block;
   border-radius: 1rem;
+  border:none;
 }
 
 .dropdown-content a:hover {background-color: #ddd;}
@@ -132,115 +133,6 @@
   border-radius: 50%;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-
-
-.details-modal {
-  background: #ffffff;
-  border-radius: 0.5em;
-  box-shadow: 0 10px 20px rgba(black, 0.2);
-  left: 50%;
-  max-width: 90%;
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 30em;
-  text-align: left;
-  max-height: 90vh;
-  display: flex;
-  flex-direction: column;
-
-  }
-
-  .details-modal-close {
-    align-items: center;
-    color: #111827;
-    display: flex;
-    height: 4.5em;
-    justify-content: center;
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 4.5em;
-
-   
-  }
-
-  .svg {
-    display: block;
-  }
-
-
-  .details-modal-title {
-    color: #111827;
-    padding: 1.5em 2em;
-    pointer-events: all;
-    position: relative;
-    width: calc(100% - 4.5em);
-    
-  }
-
-  .details-modal-title h1 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: normal;
-  }
-
-  .details-modal-content {
-    border-top: 1px solid #e0e0e0;
-    padding: 2em;
-    pointer-events: all;
-    overflow: auto;
-  }
-
-  .close {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    right: 0%;
-    padding: 12px 16px;
-    transform: translate(0%, -50%);
-  }
-
 
 
 
@@ -249,6 +141,10 @@
     width: 300px;
     height: 300px;
     perspective: 1000px;
+  }
+
+  .flip-card:hover{
+    padding-left: 40px;
   }
   
   .flip-card-inner {
