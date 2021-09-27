@@ -7,11 +7,56 @@
   <div class="modal-body ml-1">
     <div class="form-row form-background-header">
       <div class="col-md-12" style="font-size: 16px;">
-        Please contact Support for more information
+        <div id="registration" style="display: block;">
+          <form #f="ngForm" [formGroup]="registerForm" (submit)="updateProfile()">
+
+              <div class="form-group">
+                  <div class="col-12">
+                      <input type="text" id="fname" class="form-control" placeholder="First Name" formControlName="firstName">
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <div class="col-12">
+                      <input type="text" id="lname" class="form-control" placeholder="Last Name" formControlName="lastName">
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <div class="col-12">
+                      <input type="phone" id="phone" class="form-control" placeholder="Phone" formControlName="phone">
+                  </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-12">
+                    <input [type]="showPass.checked ? 'text' : 'password'" id="old_password" class="form-control" placeholder="Current Password" formControlName="old_password">
+                </div>
+            </div>
+
+              <div class="form-group">
+                  <div class="col-12">
+                      <input [type]="showPass.checked ? 'text' : 'password'" id="password" class="form-control" placeholder="New Password" formControlName="password">
+                  </div>
+              </div>
+
+              <div class="form-group text-left">
+                  <div class="col-12">
+                      <input [type]="showPass.checked ? 'text' : 'password'" id="repassword" class="form-control" placeholder="Re-enter Password" formControlName="repassword">
+                      <input type="checkbox" #showPass (change)="0" class="ml-2" >  Show Password <small class="text-muted"></small>
+                  </div> 
+                 
+              </div> 
+
+
+              <br>
+
+          </form> 
+      </div>
       </div>
     </div>
   </div>
   <div class="modal-footer">
-    <button class="btn btn-m btn-success mr-1" (click)="closeModal(true)">Update</button>
+    <button class="btn btn-m btn-success mr-1" [disabled]="!registerForm.valid" (click)="closeModal(true)">Update</button>
     <button class="btn btn-m btn-warning mr-1" (click)="closeModal(false)">Close</button>
   </div>
