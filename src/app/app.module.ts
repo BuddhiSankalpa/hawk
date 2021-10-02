@@ -33,7 +33,7 @@ import { AuthService } from './auth/auth.service';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { EditProfileComponent } from './post-login/edit-profile/edit-profile.component';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
- 
+import { FacebookModule } from 'ngx-facebook';
 
 @NgModule({
   declarations: [
@@ -57,7 +57,8 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
     MatFormFieldModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    FacebookModule.forRoot()
   ],
   providers: [
      BsModalService, 
