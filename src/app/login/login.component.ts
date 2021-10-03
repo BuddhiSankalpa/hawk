@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { AppService } from '../app.service';
 import { ApiService } from '../services/api-service.service';
 
 @Component({
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private toastr: ToastrService,
     private api: ApiService,
-    public router: Router
+    public router: Router,
+    private mainServ: AppService
   ) {}
 
   ngOnInit(): void {
@@ -107,7 +109,11 @@ export class LoginComponent implements OnInit {
             if (res.status) {
               this.toastr.success(msg);
 
+              this.mainServ.loggedUser = JSON.parse(atob(res.user));
+
+              sessionStorage.setItem('doks-webapp-user', res.user);
               sessionStorage.setItem('doks-webapp-token', res.token);
+              
               this.router.navigateByUrl('/portal');
             } else {
               this.toastr.error(msg);

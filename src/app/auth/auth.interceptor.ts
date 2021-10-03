@@ -8,10 +8,14 @@ import {
   import { tap } from 'rxjs/operators';
   import { Injectable } from '@angular/core';
   import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { BsModalService } from 'ngx-bootstrap/modal';
   
   @Injectable()
   export class AuthInterceptor implements HttpInterceptor {
-    constructor(private router: Router) {}
+    constructor(private router: Router,
+      private toast: ToastrService,
+      private modalService: BsModalService) {}
   
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
       
@@ -26,11 +30,11 @@ import {
           tap(
             succ => {},
             err => {
-              if (err.status === 401) {
-                // this.router.navigateByUrl('/login');
-              } else if ((err.status = 403)) {
-                // this.router.navigateByUrl('/forbidden');
-                // alert(err.localStorage.getItem('userToken'));
+              if (err.status === 403) {
+                this.toast.warning("Session Expired!");
+                this.modalService.hide();
+                sessionStorage.clear();
+                this.router.navigateByUrl('/account');
               }
             }
           )
