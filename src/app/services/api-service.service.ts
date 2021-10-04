@@ -10,6 +10,7 @@ export class ApiService{
 
   constructor(private http: HttpClient) { }
 
+  //auth
   register(regObj: any):Observable<any>{
     return this.http.post(`${baseUrl}/auth/register`, regObj);
   }
@@ -26,11 +27,17 @@ export class ApiService{
     return this.http.post(`${baseUrl}/auth/reset?email=${email}`,{});
   }
 
+  //annoubcements
   getNewsLine() : Observable<any>{
     return this.http.get(`${baseUrl}/announcements/news/getAll`);
   }
 
   getAnnouncements() : Observable<any>{
     return this.http.get(`${baseUrl}/announcements/webinars/getAll`);
+  }
+
+  //profile
+  update(profile: any):Observable<any>{
+    return this.http.post(`${baseUrl}/profile/update`, profile);
   }
 }
