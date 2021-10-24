@@ -4,6 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ApiService } from '../services/api-service.service';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { AppService } from '../app.service';
 declare var loadPaycorpPayment: any;
 @Component({
   selector: 'app-post-login',
@@ -14,6 +15,7 @@ export class PostLoginComponent implements OnInit {
 
   constructor(public router: Router,
      private toastr: ToastrService,
+      private mainServ: AppService,
       private api: ApiService,
       private modalService: BsModalService) { }
 
@@ -65,13 +67,21 @@ export class PostLoginComponent implements OnInit {
   }
 
   buildPayment() {
+
+    if(!this.mainServ.loggedUser){
+      let user = sessionStorage.getItem('doks-webapp-user');
+      this.mainServ.loggedUser = JSON.parse(atob(user));
+    }
+
+    let userObj = this.mainServ.loggedUser;
+    
     return {
           clientId: 14004839,
           paymentAmount: 10,
           currency: 'LKR',
-          returnUrl: `http://localhost:4200/payment`,
-          clientRef: 'CREF-12345',
-          comment: 'This is a demo payment'
+          returnUrl: `https://doksinternational.com/payment`,
+          clientRef: 'CREF-'+ userObj.userId,
+          comment: 'CREF-'+ userObj.userId
     };
   }
 
