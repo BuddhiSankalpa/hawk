@@ -1,39 +1,39 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import {MatTabsModule} from '@angular/material/tabs';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// @ts-ignore
-import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { AboutComponent } from './about/about.component';
-
-import {IvyCarouselModule} from 'angular-responsive-carousel';
-import { ContactComponent } from './contact/contact.component';
-
-import { NgImageSliderModule } from 'ng-image-slider';
-
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTabsModule } from '@angular/material/tabs';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
-import { TopbarComponent } from './topbar/topbar.component';
-import { Header2Component } from './header2/header2.component';
-import { NewsFeedsComponent } from './news-feeds/news-feeds.component';
-import { StocksBannerComponent } from './stocks-banner/stocks-banner.component';
-import { EducationComponent } from './education/education.component';
-import { PostLoginComponent } from './post-login/post-login.component';
-import { NewsComponent } from './news/news.component';
-import { AuthGuard } from './auth/auth.guard';
-import { AuthService } from './auth/auth.service';
-import { AuthInterceptor } from './auth/auth.interceptor';
-import { EditProfileComponent } from './post-login/edit-profile/edit-profile.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { NgImageSliderModule } from 'ng-image-slider';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { FacebookModule } from 'ngx-facebook';
+// @ts-ignore
+import { ToastrModule } from 'ngx-toastr';
+import { AboutComponent } from './about/about.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { AuthGuard } from './auth/auth.guard';
+import { AuthInterceptor } from './auth/auth.interceptor';
+import { AuthService } from './auth/auth.service';
+import { ContactComponent } from './contact/contact.component';
+import { EducationComponent } from './education/education.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { Header2Component } from './header2/header2.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { NewsFeedsComponent } from './news-feeds/news-feeds.component';
+import { PaymentComponent } from './payment/payment.component';
+import { EditProfileComponent } from './post-login/edit-profile/edit-profile.component';
+import { PostLoginComponent } from './post-login/post-login.component';
+import { StocksBannerComponent } from './stocks-banner/stocks-banner.component';
+import { TopbarComponent } from './topbar/topbar.component';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -44,7 +44,7 @@ import { FacebookModule } from 'ngx-facebook';
     ContactComponent,
     FooterComponent,
     HeaderComponent,
-    TopbarComponent,  Header2Component, NewsFeedsComponent, StocksBannerComponent, EducationComponent, PostLoginComponent, NewsComponent, EditProfileComponent
+    TopbarComponent,  Header2Component, NewsFeedsComponent, StocksBannerComponent, EducationComponent, PostLoginComponent, EditProfileComponent, PaymentComponent
   ],
   imports: [
     BrowserModule,

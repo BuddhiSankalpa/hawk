@@ -40,4 +40,13 @@ export class ApiService{
   update(profile: any):Observable<any>{
     return this.http.post(`${baseUrl}/profile/update`, profile);
   }
+
+  //payment
+  confirmPayment(reqId: any):Observable<any>{
+    let authToken = "4db8e016-0bd1-4e46-b942-79203eb17e13";
+    let baseUrl = "https://sampath.paycorp.lk/webinterface/qw/confirm";
+    let confirmUrl = baseUrl + "?csrfToken=" + reqId + "&authToken=" + authToken;
+
+    return this.http.post(confirmUrl, '');
+  }
 }

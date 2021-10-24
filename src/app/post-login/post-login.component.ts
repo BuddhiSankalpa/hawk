@@ -4,7 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ApiService } from '../services/api-service.service';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
-
+declare var loadPaycorpPayment: any;
 @Component({
   selector: 'app-post-login',
   templateUrl: './post-login.component.html',
@@ -28,7 +28,9 @@ export class PostLoginComponent implements OnInit {
   }
 
   payment = () => {
-    this.toastr.warning('Contact Helpdesk!');
+    //this.toastr.warning('Contact Helpdesk!');
+
+    loadPaycorpPayment(this.buildPayment());
   }
 
   editProfileModal : BsModalRef;
@@ -60,6 +62,17 @@ export class PostLoginComponent implements OnInit {
 
       }
     });
+  }
+
+  buildPayment() {
+    return {
+          clientId: 14004839,
+          paymentAmount: 10,
+          currency: 'LKR',
+          returnUrl: `http://localhost:4200/payment`,
+          clientRef: 'CREF-12345',
+          comment: 'This is a demo payment'
+    };
   }
 
 }
