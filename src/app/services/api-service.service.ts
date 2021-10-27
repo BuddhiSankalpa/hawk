@@ -50,7 +50,7 @@ export class ApiService{
     let baseUrl = "https://sampath.paycorp.lk/webinterface/qw/confirm";
     let confirmUrl = baseUrl + "?csrfToken=" + reqId + "&authToken=" + authToken;
 
-    let headers: {
+    let headers = {
       "Access-Control-Allow-Origin": "https://doksinternational.com",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
       "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
