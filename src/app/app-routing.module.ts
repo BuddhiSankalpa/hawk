@@ -12,8 +12,8 @@ const routes: Routes = [
   // { path: 'about', component: AboutComponent },
   { path: '', component: HomeComponent },
   { path: 'education', component: EducationComponent },
-  { path: 'payment', component: PaymentComponent },
-  { path: 'portal',canActivate:[AuthGuard], component: PostLoginComponent }
+  { path: 'payment', canActivate:[AuthGuard], component: PaymentComponent },
+  { path: 'portal', canActivate:[AuthGuard], component: PostLoginComponent }
 ];
 
 @NgModule({

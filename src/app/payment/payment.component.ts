@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ApiService } from '../services/api-service.service';
 
@@ -11,10 +11,12 @@ import { ApiService } from '../services/api-service.service';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent implements OnInit {
-  paymentRef: { reqid: any; clientRef: any; };
+  paymentRef: any = {};
+  paymentRes: any = {};
 
   
   constructor(private activatedRoute: ActivatedRoute,
+    private router: Router,
     private api: ApiService,
     private toast: ToastrService) { }
 
@@ -34,10 +36,26 @@ export class PaymentComponent implements OnInit {
       this.api.confirmPayment(this.paymentRef.reqid).subscribe(res => {
         if(res){
           console.log(res);
-          this.toast.success('Payment Completed Succesfully!');
+
+          let data_array = res.split('&');
+
+          data_array.forEach(element => {
+            let data =  element.split('=');
+
+            this.paymentRes[data[0]] = data[1];
+          });
+          
+          if(this.paymentRes['responseCode'] == '00'){
+            this.toast.success('Transaction was processed successfully!');
+          }else {
+            this.toast.error('Transaction Failed!');
+            this.router.navigateByUrl('/portal');
+          }
+          
         }
       }, () => {
         this.toast.error('Payment Failed!');
+        this.router.navigateByUrl('/portal');
       });
     }
   }
