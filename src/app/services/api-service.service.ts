@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { baseUrl } from 'src/environments/environment';
-
+declare var CryptoJS: any;
 @Injectable({
   providedIn: 'root'
 })
@@ -41,21 +41,9 @@ export class ApiService{
     return this.http.post(`${baseUrl}/profile/update`, profile);
   }
 
-  // confirmPayment(reqId: any):Observable<any>{
-  //   return this.http.get(`${baseUrl}/payment-confirmation?reqid=${reqId}`, {responseType: 'text'});
-  // }
-
+  //payment
   confirmPayment(reqId: any):Observable<any>{
-    let authToken = "4db8e016-0bd1-4e46-b942-79203eb17e13";
-    let baseUrl = "https://sampath.paycorp.lk/webinterface/qw/confirm";
-    let confirmUrl = baseUrl + "?csrfToken=" + reqId + "&authToken=" + authToken;
-
-    let headers = {
-      "Access-Control-Allow-Origin": "https://doksinternational.com",
-      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
-    }
-
-    return this.http.post(confirmUrl, '', {headers: headers});
+    return this.http.get(`${baseUrl}/payment-confirmation?reqid=${reqId}`);
   }
+
 }
