@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { AppService } from '../app.service';
 import { ApiService } from '../services/api-service.service';
 
 
@@ -11,34 +12,30 @@ import { ApiService } from '../services/api-service.service';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent implements OnInit {
-  paymentRef: { reqid: any; clientRef: any; };
+  paymentRef: any = {};
+  paymentRes: any = {};
 
+
+  loading: boolean = true;
+  txnReference: any;
   
   constructor(private activatedRoute: ActivatedRoute,
-    private api: ApiService,
-    private toast: ToastrService) { }
+    private router: Router,
+    private mainServ: AppService) { }
 
   ngOnInit(): void {
-    
-
+  
     this.activatedRoute.queryParams.subscribe(params => {
-      this.paymentRef = {
+      let paymentRef = {
         reqid: params['reqid'],
         clientRef: params['clientRef']
       }
+
+      this.mainServ.paymentRef = paymentRef;
+
+      this.router.navigateByUrl('/payment-confirmation');
     });
   }
 
-  confirmPayment(){
-    if(this.paymentRef && this.paymentRef.reqid){
-      this.api.confirmPayment(this.paymentRef.reqid).subscribe(res => {
-        if(res){
-          console.log(res);
-          this.toast.success('Payment Completed Succesfully!');
-        }
-      }, () => {
-        this.toast.error('Payment Failed!');
-      });
-    }
-  }
+
 }

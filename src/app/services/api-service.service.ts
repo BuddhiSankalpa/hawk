@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { baseUrl } from 'src/environments/environment';
-
+declare var CryptoJS: any;
 @Injectable({
   providedIn: 'root'
 })
@@ -43,10 +43,7 @@ export class ApiService{
 
   //payment
   confirmPayment(reqId: any):Observable<any>{
-    let authToken = "4db8e016-0bd1-4e46-b942-79203eb17e13";
-    let baseUrl = "https://sampath.paycorp.lk/webinterface/qw/confirm";
-    let confirmUrl = baseUrl + "?csrfToken=" + reqId + "&authToken=" + authToken;
-
-    return this.http.post(confirmUrl, '');
+    return this.http.get(`${baseUrl}/payment-confirmation?reqid=${reqId}`);
   }
+
 }

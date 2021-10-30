@@ -30,6 +30,7 @@ import { EditProfileComponent } from './post-login/edit-profile/edit-profile.com
 import { PostLoginComponent } from './post-login/post-login.component';
 import { StocksBannerComponent } from './stocks-banner/stocks-banner.component';
 import { TopbarComponent } from './topbar/topbar.component';
+import { PaymentConfirmationComponent } from './payment/payment-confirmation/payment-confirmation.component';
 
 
 
@@ -44,7 +45,7 @@ import { TopbarComponent } from './topbar/topbar.component';
     ContactComponent,
     FooterComponent,
     HeaderComponent,
-    TopbarComponent,  Header2Component, NewsFeedsComponent, StocksBannerComponent, EducationComponent, PostLoginComponent, EditProfileComponent, PaymentComponent
+    TopbarComponent,  Header2Component, NewsFeedsComponent, StocksBannerComponent, EducationComponent, PostLoginComponent, EditProfileComponent, PaymentComponent, PaymentConfirmationComponent
   ],
   imports: [
     BrowserModule,
