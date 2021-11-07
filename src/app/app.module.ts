@@ -27,6 +27,7 @@ import { LoginComponent } from './login/login.component';
 import { NewsFeedsComponent } from './news-feeds/news-feeds.component';
 import { PaymentComponent } from './payment/payment.component';
 import { EditProfileComponent } from './post-login/edit-profile/edit-profile.component';
+import { SelectPaymentComponent } from './post-login/select-payment/select-payment.component';
 import { PostLoginComponent } from './post-login/post-login.component';
 import { StocksBannerComponent } from './stocks-banner/stocks-banner.component';
 import { TopbarComponent } from './topbar/topbar.component';
@@ -45,7 +46,16 @@ import { PaymentConfirmationComponent } from './payment/payment-confirmation/pay
     ContactComponent,
     FooterComponent,
     HeaderComponent,
-    TopbarComponent,  Header2Component, NewsFeedsComponent, StocksBannerComponent, EducationComponent, PostLoginComponent, EditProfileComponent, PaymentComponent, PaymentConfirmationComponent
+    TopbarComponent,  
+    Header2Component, 
+    NewsFeedsComponent, 
+    StocksBannerComponent, 
+    EducationComponent, 
+    PostLoginComponent,
+    SelectPaymentComponent, 
+    EditProfileComponent,
+    PaymentComponent, 
+    PaymentConfirmationComponent
   ],
   imports: [
     BrowserModule,
