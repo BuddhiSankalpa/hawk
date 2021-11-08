@@ -4,6 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ApiService } from '../services/api-service.service';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { SelectPaymentComponent } from './select-payment/select-payment.component';
 import { AppService } from '../app.service';
 
 @Component({
@@ -29,10 +30,18 @@ export class PostLoginComponent implements OnInit {
     this.router.navigate(['/account']);
   }
 
+  selectPaymentModal : BsModalRef;
   payment = () => {
     //this.toastr.warning('Contact Helpdesk!');
 
-    this.mainServ.loadPayment();
+    // this.mainServ.loadPayment();
+    this.selectPaymentModal = this.modalService.show(SelectPaymentComponent, {
+      animated: true,
+      keyboard: true,
+      backdrop: true,
+      ignoreBackdropClick: true,
+      class: 'modal-lg'
+    });
   }
 
   editProfileModal : BsModalRef;
