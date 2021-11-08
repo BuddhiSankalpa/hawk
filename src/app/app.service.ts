@@ -9,28 +9,56 @@ export class AppService {
 
   loggedUser: any;
   paymentRef: any;
+  paymentAmount: number;
+  currency: String
 
-  loadPayment(){
-    loadPaycorpPayment(this.buildPayment());
+  loadPayment(paymentAmount: number, currency: String){
+    loadPaycorpPayment(this.buildPayment(paymentAmount, currency));
   }
 
-  buildPayment() {
+  buildPayment(paymentAmount: number, currency: String) {
 
-    if(!this.loggedUser){
-      let user = sessionStorage.getItem('doks-webapp-user');
-      this.loggedUser = JSON.parse(atob(user));
-    }
-
-    let userObj = this.loggedUser;
-    
+    let userObj = this.loggedUser; 
     return {
-          clientId: 14004839,
-          paymentAmount: 15000000,
-          currency: 'LKR',
+          clientId: currency === 'LKR' ? 14004839 : 14004840,
+          paymentAmount: paymentAmount * 100,
+          currency: currency,
           returnUrl: `https://doksinternational.com/payment`,
           //returnUrl: `http://localhost:4200/payment`,
           clientRef: userObj.userId,
           comment: userObj.userId
     };
+  }
+
+  getPaymentPlans(currency: String){
+    if(currency === 'LKR'){
+      return {
+        currency: 'LKR',
+        full: 150000,
+        plan1: {
+          inst1: 75000,
+          inst2: 75000
+        },
+        plan2: {
+          inst1: 50000,
+          inst2: 100000
+        },
+        registration: 5000
+      }
+    } else {
+      return {
+        currency: 'USD',
+        full: 2000,
+        plan1: {
+          inst1: 1000,
+          inst2: 1000
+        },
+        plan2: {
+          inst1: 5000,
+          inst2: 1500
+        },
+        registration: 50
+      }
+    }
   }
 }

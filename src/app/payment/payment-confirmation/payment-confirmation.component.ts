@@ -66,10 +66,6 @@ export class PaymentConfirmationComponent implements OnInit {
   }
 
   continue() {
-    if(this.approved){
-      this.router.navigateByUrl('/portal');
-    } else {
-      this.mainServ.loadPayment();
-    }
+    this.router.navigateByUrl('/portal');
   }
 }

@@ -46,4 +46,8 @@ export class ApiService{
     return this.http.get(`${baseUrl}/payment-confirmation?reqid=${reqId}`);
   }
 
+  getUserPayment(userId: number):Observable<any>{
+    return this.http.get(`${baseUrl}/payment/user?userId=${userId}`);
+  }
+
 }
