@@ -25,11 +25,12 @@ export class AppService {
     
     return {
           clientId: 14004839,
-          paymentAmount: 10,
+          paymentAmount: 15000000,
           currency: 'LKR',
-          returnUrl: `https://doksinternational.com/payment`, //`http://localhost:4200/payment`
-          clientRef: 'CREF-'+ userObj.userId,
-          comment: 'CREF-'+ userObj.userId
+          returnUrl: `https://doksinternational.com/payment`,
+          //returnUrl: `http://localhost:4200/payment`,
+          clientRef: userObj.userId,
+          comment: userObj.userId
     };
   }
 }
