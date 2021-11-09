@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormGroup} from '@angular/forms';
 import { AppService } from 'src/app/app.service';
-import { MustMatch } from 'src/app/_helpers/must-match.validator';
 import { ApiService } from 'src/app/services/api-service.service';
 import { ToastrService } from 'ngx-toastr';
 
@@ -15,76 +14,78 @@ import { ToastrService } from 'ngx-toastr';
 export class SelectPaymentComponent implements OnInit {
 
   profileForm: FormGroup;
+  paymentDetails: any = {};
+  paymentObj: any = {};
 
-  constructor(private modalRef: BsModalRef,
-    private toast: ToastrService,
+  loading: Boolean = true;
+
+  constructor(
     private mainServ: AppService,
     private api: ApiService,
-    private fb: FormBuilder) { }
+    private toastr: ToastrService,
+    private modalRef: BsModalRef) { }
 
   ngOnInit() {
-    this.profileForm = this.fb.group({
-      firstName: new FormControl('', Validators.required),
-      lastName: new FormControl('', Validators.required),
-      phone: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required),
-      newPassword: new FormControl(''),
-      repassword: new FormControl('')
-    },
-    {
-      validator: MustMatch("newPassword", "repassword"),
-    });
+    this.loadPaymentDetails();
+  }
 
-
-    
-    if(!this.mainServ.loggedUser){
-      let user = sessionStorage.getItem('doks-webapp-user');
-      this.mainServ.loggedUser = JSON.parse(atob(user));
-    }
-
+  loadPaymentDetails(){
     let userObj = this.mainServ.loggedUser;
     if(userObj){
-      this.profileForm.get('firstName').patchValue(userObj.firstName);
-      this.profileForm.get('lastName').patchValue(userObj.lastName);
-      this.profileForm.get('phone').patchValue(userObj.phone);
+      this.api.getUserPayment(userObj.userId).subscribe(res => {
+        if(res){
+          this.paymentDetails = Object.assign(res);
+          this.setPaymentPlans(this.paymentDetails.currency);
+        }else{
+          this.setPaymentPlans(null);
+        }
+
+        this.loading = false;
+      }, () => {
+        this.toastr.error("Error Retreiving Payment Details!");
+      });
     }
+  }
+
+  pay(option: number){
+    let regFee = this.paymentDetails.paymentStatus === 'REGISTRATION_FEE' ? 0 : this.paymentObj.registration; 
+
+    switch(option) {
+      case 0:
+        this.mainServ.loadPayment(this.paymentDetails.pendingAmount, this.paymentDetails.currency);
+        break;
+      case 1:
+        this.mainServ.loadPayment(this.paymentObj.full, this.paymentObj.currency);
+        break;
+      case 2:
+        this.mainServ.loadPayment(regFee + this.paymentObj.plan1.inst1, this.paymentObj.currency);
+        break;
+      case 3:
+        this.mainServ.loadPayment(regFee + this.paymentObj.plan2.inst1, this.paymentObj.currency);
+        break;
+      case 4:
+        this.mainServ.loadPayment(this.paymentObj.registration, this.paymentObj.currency);
+        break;
+    }
+  }
+
+  setPaymentPlans(currency: String) {
+    if(currency){
+      this.paymentObj = this.mainServ.getPaymentPlans(currency);
+      return;
+    }
+
+    var offset = new Date().getTimezoneOffset(), o = Math.abs(offset);
+    let timezone = (offset < 0 ? "+" : "-") + ("00" + Math.floor(o / 60)).slice(-2) + ":" + ("00" + (o % 60)).slice(-2);
+    if(timezone == "+05:30"){
+      this.paymentObj = this.mainServ.getPaymentPlans('LKR');
+    }else{
+      this.paymentObj = this.mainServ.getPaymentPlans('USD');
+    }
+
   }
 
   closeModal() {
     this.modalRef.hide();
-  }
-
-  updateProfile =()=>{
-
-    let formval = this.profileForm.getRawValue();
-    let profileUpdateObj: any = {
-      email: this.mainServ.loggedUser.email,
-      firstName: formval.firstName,
-      lastName: formval.lastName,
-      phone: formval.phone,
-      password: formval.password,
-      newPassword: formval.newPassword != '' ? formval.newPassword : null,
-    }
-
-    this.api.update(profileUpdateObj).subscribe(res => {
-      if(res){
-        if(res.status){
-          this.toast.success(res.message);
-
-          let userObj = this.mainServ.loggedUser;
-          userObj['firstName'] = profileUpdateObj['firstName'];
-          userObj['lastName'] = profileUpdateObj['lastName'];
-          userObj['phone'] = profileUpdateObj['phone'];
-
-          sessionStorage.setItem('doks-webapp-user', btoa(JSON.stringify(this.mainServ.loggedUser)));
-
-          this.closeModal();
-        }else{
-          this.toast.warning(res.message);
-        }
-      }
-    }, () => {
-      this.toast.error('Profile Updating Failed!');
-    });
   }
 }

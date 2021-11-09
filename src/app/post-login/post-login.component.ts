@@ -32,9 +32,6 @@ export class PostLoginComponent implements OnInit {
 
   selectPaymentModal : BsModalRef;
   payment = () => {
-    //this.toastr.warning('Contact Helpdesk!');
-
-    // this.mainServ.loadPayment();
     this.selectPaymentModal = this.modalService.show(SelectPaymentComponent, {
       animated: true,
       keyboard: true,

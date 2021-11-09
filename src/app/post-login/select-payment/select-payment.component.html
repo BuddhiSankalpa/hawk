@@ -4,145 +4,157 @@
         <span aria-hidden="true">&times;</span>
     </button>
 </div>
-<div class="modal-body ml-1">
+<div class="modal-body ml-1" *ngIf="!loading">
     <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-6">
-                <label>Paid Amount</label>
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-6">
-                <label>Rs. 100000.00</label>
-            </div>
-        </div>
-        <div class="row" style="padding-bottom: 50px;">
-            <div class="col-md-6 col-sm-6 col-xs-6">
-                <label>Pending Amount</label>
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-6">
-                <label>Rs. 50000.00</label>
-            </div>
-        </div>
-        <div class="row" style="padding-bottom: 10px;">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="card text-center">
-                    <!-- <div class="card-header">
-                    Featured
-                </div> -->
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                <h5 class="card-title">Make full payment</h5>
-
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-6" >
-                                <h5 class="card-title">Rs. 150000.00</h5>
-
-                            </div>
-                        </div>
-                        <p class="card-text" style="color: red;">*Registration fee wayed off</p>
-                        <a href="#" class="btn btn-primary">Pay Now</a>
-                    </div>
-                    <!-- <div class="card-footer text-muted">
-                    2 days ago
-                </div> -->
+        <div *ngIf="paymentDetails.paymentStatus">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <label>Paid Amount</label>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <label>{{paymentDetails.paidAmount + " " + paymentDetails.currency}}</label>
                 </div>
             </div>
+            <div class="row" style="padding-bottom: 50px;">
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <label>Pending Amount</label>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <label>{{paymentDetails.pendingAmount + " " + paymentDetails.currency}}</label>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" (click)="pay(0)" *ngIf="paymentDetails.paymentStatus === 'PARTIAL_FEE'">
+                Pay Now
+            </button>
         </div>
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Payment Plan 1</h5>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                        <p class="card-text">Registration fee</p>
+        
+        <div *ngIf="!paymentDetails.paymentStatus || paymentDetails.paymentStatus === 'REGISTRATION_FEE'">
+            <div class="row" style="padding-bottom: 10px;">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="card text-center">
+                        <!-- <div class="card-header">
+                        Featured
+                    </div> -->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <h5 class="card-title">Make full payment</h5>
 
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                        <p class="card-text">Rs. 5000.00</p>
-
-                                    </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                        <p class="card-text">1st Installment</p>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <h5 class="card-title">{{paymentObj.full + " " + paymentObj.currency}}</h5>
 
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                        <p class="card-text">Rs. 75000.00</p>
-
-                                    </div>
                                 </div>
-                                <div class="row" style="padding-bottom: 20px;">
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                        <p class="card-text">2nd Installment</p>
-
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                        <p class="card-text">Rs. 75000.00</p>
-
-                                    </div>
-                                </div>
-                                <a href="#" class="btn btn-primary">Pay Now</a>
                             </div>
+                            <p class="card-text" style="color: red;">*Registration fee wayed off</p>
+                            <button class="btn btn-primary" (click)="pay(1)">Pay Now</button>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Payment Plan 2</h5>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                        <p class="card-text">Registration fee</p>
-
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                        <p class="card-text">Rs. 5000.00</p>
-
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                        <p class="card-text">1st Installment</p>
-
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                        <p class="card-text">Rs. 50000.00</p>
-
-                                    </div>
-                                </div>
-                                <div class="row" style="padding-bottom: 20px;">
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                        <p class="card-text">2nd Installment</p>
-
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                        <p class="card-text">Rs. 100000.00</p>
-
-                                    </div>
-                                </div>
-                                <a href="#" class="btn btn-primary">Pay Now</a>
-                            </div>
-                        </div>
+                        <!-- <div class="card-footer text-muted">
+                        2 days ago
+                    </div> -->
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Payment Plan 1</h5>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <p class="card-text">Registration fee</p>
+
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <p class="card-text">{{paymentObj.registration + " " + paymentObj.currency}}</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <p class="card-text">1st Installment</p>
+
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <p class="card-text">{{paymentObj.plan1.inst1 + " " + paymentObj.currency}}</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-bottom: 20px;">
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <p class="card-text">2nd Installment</p>
+
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <p class="card-text">{{paymentObj.plan1.inst2 + " " + paymentObj.currency}}</p>
+
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary" (click)="pay(2)">Pay Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Payment Plan 2</h5>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <p class="card-text">Registration fee</p>
+
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <p class="card-text">{{paymentObj.registration + " " + paymentObj.currency}}</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <p class="card-text">1st Installment</p>
+
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <p class="card-text">{{paymentObj.plan2.inst1 + " " + paymentObj.currency}}</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-bottom: 20px;">
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <p class="card-text">2nd Installment</p>
+
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <p class="card-text">{{paymentObj.plan2.inst2 + " " + paymentObj.currency}}</p>
+
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary" (click)="pay(3)">Pay Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row" style="padding-top: 20px;">
+
+        <div class="row" style="padding-top: 20px;" *ngIf="!paymentDetails.paymentStatus">
 
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="row">
-
-            <a href="#" style="margin:auto;" class="btn btn-warning">Pay Registration fee only</a>
-</div>
-</div>
+                    <button (click)="pay(4)" style="margin:auto;" class="btn btn-warning">
+                        Pay Registration fee only
+                    </button>
+                </div>
+            </div>
         </div>
+
     </div>
 
 </div>
 
 <div class="modal-footer">
-    <button class="btn btn-m btn-warning mr-1">Close</button>
+    <button class="btn btn-m btn-warning mr-1" (click)="closeModal()">Close</button>
 </div>

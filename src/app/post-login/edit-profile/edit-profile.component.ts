@@ -35,13 +35,6 @@ export class EditProfileComponent implements OnInit {
       validator: MustMatch("newPassword", "repassword"),
     });
 
-
-    
-    if(!this.mainServ.loggedUser){
-      let user = sessionStorage.getItem('doks-webapp-user');
-      this.mainServ.loggedUser = JSON.parse(atob(user));
-    }
-
     let userObj = this.mainServ.loggedUser;
     if(userObj){
       this.profileForm.get('firstName').patchValue(userObj.firstName);

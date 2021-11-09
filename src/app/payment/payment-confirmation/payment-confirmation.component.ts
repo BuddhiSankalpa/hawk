@@ -29,7 +29,9 @@ export class PaymentConfirmationComponent implements OnInit {
     this.mainServ.paymentRef = undefined;
 
     if(this.paymentRef){
-      this.confirmPayment();
+
+      setTimeout(() => this.confirmPayment(), 5000);
+      
     } else {
       this.router.navigateByUrl('/portal');
     }
@@ -45,7 +47,7 @@ export class PaymentConfirmationComponent implements OnInit {
             this.router.navigateByUrl('/portal');
           } else {
             this.loading = false;
-            if(res.responseData.responseCode == 10){
+            if(res.responseData.responseCode == "00"){
               this.approved = true;
               this.responseText = "YOUR PAYMENT HAS BEEN RECEIVED";
             }else {
@@ -64,10 +66,6 @@ export class PaymentConfirmationComponent implements OnInit {
   }
 
   continue() {
-    if(this.approved){
-      this.router.navigateByUrl('/portal');
-    } else {
-      this.mainServ.loadPayment();
-    }
+    this.router.navigateByUrl('/portal');
   }
 }
