@@ -32,7 +32,7 @@ import { PostLoginComponent } from './post-login/post-login.component';
 import { StocksBannerComponent } from './stocks-banner/stocks-banner.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { PaymentConfirmationComponent } from './payment/payment-confirmation/payment-confirmation.component';
-
+import { ArchwizardModule } from 'angular-archwizard';
 
 
 
@@ -69,7 +69,8 @@ import { PaymentConfirmationComponent } from './payment/payment-confirmation/pay
     ReactiveFormsModule,
     ToastrModule.forRoot(),
     HttpClientModule,
-    FacebookModule.forRoot()
+    FacebookModule.forRoot(),
+    ArchwizardModule
   ],
   providers: [
      BsModalService, 

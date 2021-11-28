@@ -36,12 +36,12 @@ export class AppService {
         currency: 'LKR',
         full: 150000,
         plan1: {
-          inst1: 75000,
-          inst2: 75000
+          inst1: 100000,
+          inst2: 50000
         },
         plan2: {
-          inst1: 50000,
-          inst2: 100000
+          inst1: 75000,
+          inst2: 75000
         },
         registration: 5000
       }

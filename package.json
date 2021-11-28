@@ -23,6 +23,7 @@
     "@angular/platform-browser": "~11.2.0",
     "@angular/platform-browser-dynamic": "~11.2.0",
     "@angular/router": "~11.2.0",
+    "angular-archwizard": "3.0.0",
     "angular-responsive-carousel": "^2.0.2",
     "firebase": "^7.0 || ^8.0",
     "jquery": "^3.6.0",
