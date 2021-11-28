@@ -18,6 +18,8 @@ export class SelectPaymentComponent implements OnInit {
   paymentObj: any = {};
 
   loading: Boolean = true;
+  optionNumber: number;
+  planSelected: boolean;
 
   constructor(
     private mainServ: AppService,
@@ -45,6 +47,11 @@ export class SelectPaymentComponent implements OnInit {
         this.toastr.error("Error Retreiving Payment Details!");
       });
     }
+  }
+
+  paymentPlanSelected(option: number){
+    this.optionNumber = option;
+    this.planSelected = true;
   }
 
   pay(option: number){

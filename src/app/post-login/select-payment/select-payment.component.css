@@ -1,0 +1,12 @@
+.centered-content {
+    margin: auto;
+    text-align: center;
+  }
+  
+  .content {
+    background-color: #fff;
+  }
+  
+  aw-wizard-step {
+    background-color: #eeeeee;
+  }
