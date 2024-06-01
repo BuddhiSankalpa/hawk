@@ -8,7 +8,7 @@ import { FacebookService } from 'ngx-facebook';
 })
 export class AppComponent {
   title = 'doks-webapp';
-  
+
   constructor(
     private fb: FacebookService
   ) {

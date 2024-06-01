@@ -33,6 +33,7 @@ import { StocksBannerComponent } from './stocks-banner/stocks-banner.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { PaymentConfirmationComponent } from './payment/payment-confirmation/payment-confirmation.component';
 import { ArchwizardModule } from 'angular-archwizard';
+import { FaqComponent } from './faq/faq.component';
 
 
 
@@ -46,16 +47,17 @@ import { ArchwizardModule } from 'angular-archwizard';
     ContactComponent,
     FooterComponent,
     HeaderComponent,
-    TopbarComponent,  
-    Header2Component, 
-    NewsFeedsComponent, 
-    StocksBannerComponent, 
-    EducationComponent, 
+    TopbarComponent,
+    Header2Component,
+    NewsFeedsComponent,
+    StocksBannerComponent,
+    EducationComponent,
     PostLoginComponent,
-    SelectPaymentComponent, 
+    SelectPaymentComponent,
     EditProfileComponent,
-    PaymentComponent, 
-    PaymentConfirmationComponent
+    PaymentComponent,
+    PaymentConfirmationComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +75,7 @@ import { ArchwizardModule } from 'angular-archwizard';
     ArchwizardModule
   ],
   providers: [
-     BsModalService, 
+     BsModalService,
      BsModalRef,
      AuthGuard,
      AuthService,

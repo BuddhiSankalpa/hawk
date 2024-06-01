@@ -10,8 +10,8 @@ export class AuthGuard implements CanActivate {
       this.router.navigate(['/account']);
       return false;
     }
-    if(!this.mainServ.loggedUser){
-      let user = sessionStorage.getItem('doks-webapp-user');
+    if (!this.mainServ.loggedUser){
+      const user = sessionStorage.getItem('doks-webapp-user');
       this.mainServ.loggedUser = JSON.parse(atob(user));
     }
 

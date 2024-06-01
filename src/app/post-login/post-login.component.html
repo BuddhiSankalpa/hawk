@@ -9,7 +9,7 @@
     <div class="container d-flex align-items-center py-3 col-md-10">
 
         <a id="main-logo" routerLink="" class="logo mr-auto"><img src="../assets/img/logo/logo_white_text.png" alt=""></a>
-        
+
         <nav class="nav-menu d-none d-lg-block  ">
         <div class="row">
             <ul>
@@ -19,6 +19,9 @@
             </ul>
             <ul>
                 <li><button  class="btn-orange btn btn-block" (click)="payment()">Payment</button></li>
+            </ul>
+            <ul>
+                <li><button  class="btn-orange btn btn-block">Subscription</button></li>
             </ul>
         </div>
         </nav>
@@ -42,7 +45,7 @@
     <section class="education-services">
         <div class="container section" data-aos="fade-up">
             <div class="text-center my-2 section-title">
-                <h3 data-aos="fade-up" data-aos-delay="100" style="font-size: xxx-large;">Welcome to 
+                <h3 data-aos="fade-up" data-aos-delay="100" style="font-size: xxx-large;">Welcome to
                     <span> DOKS </span>
                 </h3>
                 <br>
@@ -52,7 +55,7 @@
                 </h5>
 
             </div>
-         
+
             <div class="section-title">
                 <h5 class="m-auto">
                     <div class="row">
@@ -60,7 +63,7 @@
                             <a href="https://forms.gle/LoSCoHj63tgqfHZY9">
                     <button class="btn-orange mt-1 mb-0"  style="width: 75%;">Enrolment Form</button>
                     </a>
-                    </div>                        
+                    </div>
                     <div class="col-md-6">
                         <a href="https://storage.cloud.google.com/doks-admin.appspot.com/COMPLETE%20FOUNDATION%20STOCK%20TRADING%20COURSE%20(DCFSTC%201000)%202.pdf">
                     <button class="btn-orange mt-1 mb-0"  style="width: 75%;">Course Content</button>
@@ -72,56 +75,56 @@
 
             <section id="webinarLogin" class="webinarLogin" style="padding-top: 10px;">
                 <div class="container" data-aos="fade-up">
-        
+
                     <div class="section-title">
                         <h3>Upcoming Seminars & Webinars</h3>
                     </div>
-        
+
                     <div class="row no-gutter">
-        
+
                         <div class="col-lg-6 col-md-6 flip-card  " data-aos="fade-up" data-aos-delay="200">
                             <div class="flip-card-inner">
                                 <div class="box py-5 flip-card-front">
                                     <h2>Webinars</h2>
                                     <h5>Boost your trading with <br> DOKS's educational material</h5>
                                     <a href="javascript: void(0);"class="btn-text ">Get Now</a>
-            
+
                                 </div>
                                 <div class="box flip-card-back" *ngIf="announcementObj['webinar']">
                                     <h5>{{ "Webinar will be conducted on topic " + announcementObj['webinar']['topic'] + " on "+ announcementObj['webinar']['date'] + " at " + announcementObj['webinar']['time'] +"."}}</h5>
                                     <h5><a href="{{announcementObj['webinar']['description']}}">Click here to join with the session</a></h5>
                                 </div>
                                 <div class="box flip-card-back" *ngIf="!announcementObj['webinar']">
-                                    <h5>Our new webinar series will be announced soon. Stay tuned for more exciting information. 
+                                    <h5>Our new webinar series will be announced soon. Stay tuned for more exciting information.
                                         <br><br>
                                         We are glad that you are interested in Doks International. You can register with us for more exciting information on how to Trade Real Stock in the New York Stock Exchange.
                                         </h5>
                                 </div>
                             </div>
                         </div>
-        
-                        
+
+
                         <div class="col-lg-6 col-md-6 flip-card  ">
                             <div class="flip-card-inner">
                                 <div class="box py-5 flip-card-front">
                                     <h2>Seminars </h2>
                                 <h5> Get world-class trading knowledge from <br> DOKS’s team of experts</h5>
                                     <a href="javascript: void(0);" class="btn-text ">Get Now</a>
-            
+
                                 </div>
                                 <div class="box flip-card-back" *ngIf="announcementObj['seminar']">
                                     <h5>{{ "Webinar will be conducted on topic " + announcementObj['seminar']['topic'] + " on "+ announcementObj['seminar']['date'] + " at " + announcementObj['seminar']['time'] +"."}}</h5>
                                     <h5><a href="{{announcementObj['seminar']['description']}}">Click here to join with the session</a></h5>
                                 </div>
                                 <div class="box flip-card-back" *ngIf="!announcementObj['seminar']">
-                                    <h5>Unfortunately, There are no upcoming Seminars taking place at this moment  due to this prevailing situation. 
+                                    <h5>Unfortunately, There are no upcoming Seminars taking place at this moment  due to this prevailing situation.
                                         <br><br>
                                     We are glad that you are interested in Doks International. You can register with us for more exciting information on how to Trade Real Stock in the New York Stock Exchange.
                                     </h5>
                                 </div>
                             </div>
                         </div>
-        
+
                     </div>
                 </div>
             </section>

@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', Validators.required),
       repassword: new FormControl('', Validators.required),
-      //userType: new FormControl('', Validators.required),
+      // userType: new FormControl('', Validators.required),
       terms: new FormControl('', Validators.requiredTrue),
     });
 
@@ -105,7 +105,7 @@ export class LoginComponent implements OnInit {
       .subscribe(
         (res) => {
           if (res) {
-            let msg = res.message;
+            const msg = res.message;
             if (res.status) {
               this.toastr.success(msg);
 
@@ -113,7 +113,7 @@ export class LoginComponent implements OnInit {
 
               sessionStorage.setItem('doks-webapp-user', res.user);
               sessionStorage.setItem('doks-webapp-token', res.token);
-              
+
               this.router.navigateByUrl('/portal');
             } else {
               this.toastr.error(msg);
@@ -134,7 +134,7 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    let regObj = {
+    const regObj = {
       firstName: this.registerForm.value.firstName,
       lastName: this.registerForm.value.lastName,
       phone: this.registerForm.value.phone,
@@ -146,7 +146,7 @@ export class LoginComponent implements OnInit {
     this.api.register(regObj).subscribe(
       (res) => {
         if (res) {
-          let msg = res.message;
+          const msg = res.message;
           if (res.status) {
             this.user = this.registerForm.value.email;
             this.toastr.success(msg);
@@ -171,7 +171,7 @@ export class LoginComponent implements OnInit {
       .subscribe(
         (res) => {
           if (res) {
-            let msg = res.message;
+            const msg = res.message;
             if (res.status) {
               this.toastr.success(msg);
               this.registerForm.reset();
@@ -192,7 +192,7 @@ export class LoginComponent implements OnInit {
     this.api.reset(this.forgetPWForm.value.email).subscribe(
       (res) => {
         if (res) {
-          let msg = res.message;
+          const msg = res.message;
           if (res.status) {
             this.toastr.success(msg);
             this.loginForm.reset();

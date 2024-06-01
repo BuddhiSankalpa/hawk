@@ -10,43 +10,43 @@ export class ApiService{
 
   constructor(private http: HttpClient) { }
 
-  //auth
-  register(regObj: any):Observable<any>{
+  // auth
+  register(regObj: any): Observable<any>{
     return this.http.post(`${baseUrl}/auth/register`, regObj);
   }
 
-  login(email: any, password: any):Observable<any>{
-    return this.http.post(`${baseUrl}/auth/login?email=${email}&password=${password}`,{});
+  login(email: any, password: any): Observable<any>{
+    return this.http.post(`${baseUrl}/auth/login?email=${email}&password=${password}`, {});
   }
 
-  verify(email: any, verificationCode: any):Observable<any>{
-    return this.http.post(`${baseUrl}/auth/verify?email=${email}&verificationCode=${verificationCode}`,{});
+  verify(email: any, verificationCode: any): Observable<any>{
+    return this.http.post(`${baseUrl}/auth/verify?email=${email}&verificationCode=${verificationCode}`, {});
   }
 
-  reset(email: any):Observable<any>{
-    return this.http.post(`${baseUrl}/auth/reset?email=${email}`,{});
+  reset(email: any): Observable<any>{
+    return this.http.post(`${baseUrl}/auth/reset?email=${email}`, {});
   }
 
-  //annoubcements
-  getNewsLine() : Observable<any>{
+  // annoubcements
+  getNewsLine(): Observable<any>{
     return this.http.get(`${baseUrl}/announcements/news/getAll`);
   }
 
-  getAnnouncements() : Observable<any>{
+  getAnnouncements(): Observable<any>{
     return this.http.get(`${baseUrl}/announcements/webinars/getAll`);
   }
 
-  //profile
-  update(profile: any):Observable<any>{
+  // profile
+  update(profile: any): Observable<any>{
     return this.http.post(`${baseUrl}/profile/update`, profile);
   }
 
-  //payment
-  confirmPayment(reqId: any):Observable<any>{
+  // payment
+  confirmPayment(reqId: any): Observable<any>{
     return this.http.get(`${baseUrl}/payment-confirmation?reqid=${reqId}`);
   }
 
-  getUserPayment(userId: number):Observable<any>{
+  getUserPayment(userId: number): Observable<any>{
     return this.http.get(`${baseUrl}/payment/user?userId=${userId}`);
   }
 

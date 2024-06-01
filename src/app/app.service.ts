@@ -10,7 +10,7 @@ export class AppService {
   loggedUser: any;
   paymentRef: any;
   paymentAmount: number;
-  currency: String
+  currency: String;
 
   loadPayment(paymentAmount: number, currency: String){
     loadPaycorpPayment(this.buildPayment(paymentAmount, currency));
@@ -18,20 +18,20 @@ export class AppService {
 
   buildPayment(paymentAmount: number, currency: String) {
 
-    let userObj = this.loggedUser; 
+    const userObj = this.loggedUser;
     return {
           clientId: currency === 'LKR' ? 14004839 : 14004840,
           paymentAmount: paymentAmount * 100,
-          currency: currency,
+          currency,
           returnUrl: `https://doksinternational.com/payment`,
-          //returnUrl: `http://localhost:4200/payment`,
+          // returnUrl: `http://localhost:4200/payment`,
           clientRef: userObj.userId,
           comment: userObj.userId
     };
   }
 
   getPaymentPlans(currency: String){
-    if(currency === 'LKR'){
+    if (currency === 'LKR'){
       return {
         currency: 'LKR',
         full: 150000,
@@ -44,7 +44,7 @@ export class AppService {
           inst2: 75000
         },
         registration: 5000
-      }
+      };
     } else {
       return {
         currency: 'USD',
@@ -58,7 +58,7 @@ export class AppService {
           inst2: 1500
         },
         registration: 50
-      }
+      };
     }
   }
 }

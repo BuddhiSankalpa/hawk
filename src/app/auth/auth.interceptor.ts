@@ -4,21 +4,21 @@ import {
     HttpHandler,
     HttpEvent
   } from '@angular/common/http';
-  import { Observable } from 'rxjs';
-  import { tap } from 'rxjs/operators';
-  import { Injectable } from '@angular/core';
-  import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { BsModalService } from 'ngx-bootstrap/modal';
-  
-  @Injectable()
+
+@Injectable()
   export class AuthInterceptor implements HttpInterceptor {
     constructor(private router: Router,
-      private toast: ToastrService,
-      private modalService: BsModalService) {}
-  
+                private toast: ToastrService,
+                private modalService: BsModalService) {}
+
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-      
+
       if (sessionStorage.getItem('doks-webapp-token') != null) {
         const clonedreq = req.clone({
           headers: req.headers.set(
@@ -31,7 +31,7 @@ import { BsModalService } from 'ngx-bootstrap/modal';
             succ => {},
             err => {
               if (err.status === 403) {
-                this.toast.warning("Session Expired!");
+                this.toast.warning('Session Expired!');
                 this.modalService.hide();
                 sessionStorage.clear();
                 this.router.navigateByUrl('/account');

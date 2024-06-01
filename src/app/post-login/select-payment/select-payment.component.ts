@@ -32,10 +32,10 @@ export class SelectPaymentComponent implements OnInit {
   }
 
   loadPaymentDetails(){
-    let userObj = this.mainServ.loggedUser;
-    if(userObj){
+    const userObj = this.mainServ.loggedUser;
+    if (userObj){
       this.api.getUserPayment(userObj.userId).subscribe(res => {
-        if(res){
+        if (res){
           this.paymentDetails = Object.assign(res);
           this.setPaymentPlans(this.paymentDetails.currency);
         }else{
@@ -44,7 +44,7 @@ export class SelectPaymentComponent implements OnInit {
 
         this.loading = false;
       }, () => {
-        this.toastr.error("Error Retreiving Payment Details!");
+        this.toastr.error('Error Retreiving Payment Details!');
       });
     }
   }
@@ -55,9 +55,9 @@ export class SelectPaymentComponent implements OnInit {
   }
 
   pay(option: number){
-    let regFee = this.paymentDetails.paymentStatus === 'REGISTRATION_FEE' ? 0 : this.paymentObj.registration; 
+    const regFee = this.paymentDetails.paymentStatus === 'REGISTRATION_FEE' ? 0 : this.paymentObj.registration;
 
-    switch(option) {
+    switch (option) {
       case 0:
         this.mainServ.loadPayment(this.paymentDetails.pendingAmount, this.paymentDetails.currency);
         break;
@@ -77,14 +77,14 @@ export class SelectPaymentComponent implements OnInit {
   }
 
   setPaymentPlans(currency: String) {
-    if(currency){
+    if (currency){
       this.paymentObj = this.mainServ.getPaymentPlans(currency);
       return;
     }
 
-    var offset = new Date().getTimezoneOffset(), o = Math.abs(offset);
-    let timezone = (offset < 0 ? "+" : "-") + ("00" + Math.floor(o / 60)).slice(-2) + ":" + ("00" + (o % 60)).slice(-2);
-    if(timezone == "+05:30"){
+    const offset = new Date().getTimezoneOffset(), o = Math.abs(offset);
+    const timezone = (offset < 0 ? '+' : '-') + ('00' + Math.floor(o / 60)).slice(-2) + ':' + ('00' + (o % 60)).slice(-2);
+    if (timezone == '+05:30'){
       this.paymentObj = this.mainServ.getPaymentPlans('LKR');
     }else{
       this.paymentObj = this.mainServ.getPaymentPlans('USD');
