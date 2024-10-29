@@ -1,0 +1,24 @@
+@import "src/styles.scss";
+
+#lower {
+  background-color: $primary-color;
+  border-radius: 10px 10px 0 0;
+  padding: 0 30px;
+  color: $primary-font-color;
+}
+
+#logo {
+  font-size: 40px;
+  color: $primary-font-color;
+  font-weight: bold;
+}
+
+#middle {
+  span {
+    color: $primary-font-color;
+    font-weight: bold;
+  }
+  li {
+    padding: 5px 15px;
+  }
+}
