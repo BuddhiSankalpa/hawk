@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {hawkAdminUrl} from '../../environments/environment';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +10,8 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  readonly loginUrl = `${hawkAdminUrl}/login`;
+
   ngOnInit(): void {
   }
-
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit  } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { ApiService } from '../services/api-service.service';
+import {hawkAdminUrl} from '../../environments/environment';
 
 
 @Component({
@@ -21,16 +22,19 @@ import { ApiService } from '../services/api-service.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private api: ApiService) { 
+  subscriptionUrl = `${hawkAdminUrl}/subscribe`;
+  creatAccountUrl = `${hawkAdminUrl}/register`;
+
+  constructor(private api: ApiService) {
     this.getAnnouncements();
   }
 
   // ngOnInit(): void {
   // }
 
-  ngOnInit() { 
- 
-  } 
+  ngOnInit() {
+
+  }
   imageObject = [{
     image: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/5.jpg',
     thumbImage: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/5.jpg',
@@ -81,4 +85,7 @@ getAnnouncements() {
   });
 }
 
+  goToSubscription() {
+    window.location.href = this.subscriptionUrl;
+  }
 }

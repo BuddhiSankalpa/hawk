@@ -1,4 +1,4 @@
-<app-header2></app-header2> 
+<app-header2></app-header2>
 <section class="m-auto mt-lg-5 account-banner ">
     <div class="row  mt-5  ">
         <div class="col-lg-7  px-md-5 col-sm-12 text-center d-none d-lg-block d-md-block"></div>
@@ -6,9 +6,9 @@
             <p style="color: white;font-weight: 600; font-size: x-large;"><span style="color: #e6922e;">Sign up</span> with <span style="color: #e6922e;">DOKS</span>  in a few minutes</p>
             <div class="registration bg-white">
 
-                <div class="d-flex tab-header"> 
+                <div class="d-flex tab-header">
                     <div id="tab-btn-1" (click)="setTab1()" class="col-6 text-center p-3 tab-btn tab-btn-start selected">Registration</div>
-                    <div id="tab-btn-2" (click)="setTab2()" class="col-6 text-center p-3 tab-btn tab-btn-start">Login</div> 
+                    <div id="tab-btn-2" (click)="setTab2()" class="col-6 text-center p-3 tab-btn tab-btn-start">Login</div>
                 </div>
 
                 <div class="mt-3  pb-5">
@@ -81,9 +81,9 @@
                                 <div class="col-12">
                                     <input [type]="showPass.checked ? 'text' : 'password'" id="repassword" class="form-control" placeholder="Re-enter Password" formControlName="repassword">
                                     <input type="checkbox" #showPass (change)="0" class="ml-2" >  Show Password <small class="text-muted"></small>
-                                </div> 
-                               
-                            </div> 
+                                </div>
+
+                            </div>
 
 
                             <br>
@@ -94,7 +94,7 @@
                                         <input type="checkbox" style="    transform: scale(1.5);" formControlName="terms">
                                     </div>
                                     <p class="col-11  pl-0  text-left text-muted" style="font-size:small;">
-                                        By clicking here I give my consent for DOKS to contact me for marketing purposes. You can opt out at any time.
+                                        By clicking here I give my consent for HAWKto contact me for marketing purposes. You can opt out at any time.
                                     </p>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                                 </div>
                             </div>
 
-                        </form> 
+                        </form>
                     </div>
                     <div id="verification" style="display: none;">
                         <form #f="ngForm" [formGroup]="verificationForm" (submit)="verify()">
@@ -122,14 +122,14 @@
                                     <input type="text" style="font-weight: 600;" id="v-code" class="form-control" placeholder="Verification Code" formControlName="code">
                                 </div>
                             </div>
-                        
+
                             <br>
                             <div lass="form-group ">
                                 <div class="text-center w-100">
                                     <button class="btn-orange btn btn-block w-25" [disabled]="!verificationForm.valid" #submitBtn>Verify</button>
                                 </div>
                             </div>
-                        
+
                         </form>
                     </div>
                     <div id="forgetPW" style="display: none;">
@@ -141,14 +141,14 @@
                                     <input type="text" id="v-mail" class="form-control" placeholder="Email" formControlName="email">
                                 </div>
                             </div>
-                        
+
                             <br>
                             <div lass="form-group ">
                                 <div class="text-center w-100">
                                     <button class="btn-orange btn btn-block w-25" [disabled]="!forgetPWForm.valid" #submitBtn>Reset</button>
                                 </div>
                             </div>
-                        
+
                         </form>
                     </div>
                 </div>

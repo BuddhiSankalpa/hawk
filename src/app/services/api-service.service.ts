@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { baseUrl } from 'src/environments/environment';
 declare var CryptoJS: any;
 @Injectable({
@@ -16,7 +16,11 @@ export class ApiService{
   }
 
   login(email: any, password: any): Observable<any>{
-    return this.http.post(`${baseUrl}/auth/login?email=${email}&password=${password}`, {});
+    const body: object = {
+      password,
+      email
+    };
+    return this.http.post(`${baseUrl}/auth/login`, body);
   }
 
   verify(email: any, verificationCode: any): Observable<any>{
