@@ -109,10 +109,12 @@ export class LoginComponent implements OnInit {
             if (res.status) {
               this.toastr.success(msg);
 
-              this.mainServ.loggedUser = JSON.parse(atob(res.user));
+              console.log(res);
+
+              // this.mainServ.loggedUser = JSON.parse(atob(res.user));
 
               sessionStorage.setItem('doks-webapp-user', res.user);
-              sessionStorage.setItem('doks-webapp-token', res.token);
+              sessionStorage.setItem('doks-webapp-token', res.content.accessToken);
 
               this.router.navigateByUrl('/portal');
             } else {

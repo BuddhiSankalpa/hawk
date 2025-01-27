@@ -6,6 +6,7 @@ import { ApiService } from '../services/api-service.service';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { SelectPaymentComponent } from './select-payment/select-payment.component';
 import { AppService } from '../app.service';
+import {hawkAdminUrl} from '../../environments/environment';
 
 @Component({
   selector: 'app-post-login',
@@ -72,6 +73,8 @@ export class PostLoginComponent implements OnInit {
     });
   }
 
-  
 
+  gotoSubscription() {
+    window.location.href = `${hawkAdminUrl}/subscribe`;
+  }
 }

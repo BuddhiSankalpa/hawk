@@ -8,7 +8,8 @@ export const environment = {
 
 // export const baseUrl = 'http://localhost:8080';
 
-export const baseUrl = 'https://backend.doksinternational.com';
+export const baseUrl = 'https://hawk-be-555273456052.us-central1.run.app/hawk/api';
+export const hawkAdminUrl = 'https://hawd-admin.web.app/#';
 
 /*
  * For easier debugging in development mode, you can import the following file

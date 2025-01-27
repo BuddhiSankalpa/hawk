@@ -8,7 +8,7 @@
     <div class="row">
     <div class="container d-flex align-items-center py-3 col-md-10">
 
-        <a id="main-logo" routerLink="" class="logo mr-auto"><img src="../assets/img/logo/logo_white_text.png" alt=""></a>
+        <a id="main-logo" routerLink="" class="logo mr-auto"><img src="../assets/img/logo/logo_with_name.svg" alt=""></a>
 
         <nav class="nav-menu d-none d-lg-block  ">
         <div class="row">
@@ -21,7 +21,7 @@
                 <li><button  class="btn-orange btn btn-block" (click)="payment()">Payment</button></li>
             </ul>
             <ul>
-                <li><button  class="btn-orange btn btn-block">Subscription</button></li>
+                <li><button  class="btn-orange btn btn-block" (click)="gotoSubscription()" >Subscription</button></li>
             </ul>
         </div>
         </nav>
@@ -46,7 +46,7 @@
         <div class="container section" data-aos="fade-up">
             <div class="text-center my-2 section-title">
                 <h3 data-aos="fade-up" data-aos-delay="100" style="font-size: xxx-large;">Welcome to
-                    <span> DOKS </span>
+                    <span> HAWK</span>
                 </h3>
                 <br>
 
@@ -97,7 +97,7 @@
                                 <div class="box flip-card-back" *ngIf="!announcementObj['webinar']">
                                     <h5>Our new webinar series will be announced soon. Stay tuned for more exciting information.
                                         <br><br>
-                                        We are glad that you are interested in Doks International. You can register with us for more exciting information on how to Trade Real Stock in the New York Stock Exchange.
+                                        We are glad that you are interested in HAWKInternational. You can register with us for more exciting information on how to Trade Real Stock in the New York Stock Exchange.
                                         </h5>
                                 </div>
                             </div>
@@ -119,7 +119,7 @@
                                 <div class="box flip-card-back" *ngIf="!announcementObj['seminar']">
                                     <h5>Unfortunately, There are no upcoming Seminars taking place at this moment  due to this prevailing situation.
                                         <br><br>
-                                    We are glad that you are interested in Doks International. You can register with us for more exciting information on how to Trade Real Stock in the New York Stock Exchange.
+                                    We are glad that you are interested in HAWKInternational. You can register with us for more exciting information on how to Trade Real Stock in the New York Stock Exchange.
                                     </h5>
                                 </div>
                             </div>

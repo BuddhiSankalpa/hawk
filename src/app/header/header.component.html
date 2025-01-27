@@ -3,24 +3,24 @@
     <div class="container d-flex align-items-center">
 
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a id="main-logo" routerLink="" class="logo mr-auto"><img src="../assets/img/logo/logo_white_text.png" alt=""></a>
+        <a id="main-logo" routerLink="" class="logo mr-auto"><img src="../assets/img/logo/logo_with_name.svg" alt=""></a>
 
         <nav class="nav-menu d-none d-lg-block  ">
             <ul>
-                <li><a href="#about">About Us</a></li> 
+                <li><a href="#about">About Us</a></li>
                 <li><a href="#webinar">Sessions</a></li>
                 <li><a href="#pricing">Education</a></li>
                 <li><a href="#contact">Contact Us</a></li>
-                <li><a [routerLink]="['/account']">Login</a></li> 
-               
-                    <a class=" ml-4 my-2 btn-orange" [routerLink]="['/portal']" style="border: none;" > 
-                            Account 
+                <li><a [href]="loginUrl">Login</a></li>
+
+                    <a class=" ml-4 my-2 btn-orange" [routerLink]="['/portal']" style="border: none;" >
+                            Account
                     </a>
-              
+
 
             </ul>
-        </nav> 
-        
+        </nav>
+
     </div>
 
 </header>

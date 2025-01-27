@@ -27,12 +27,12 @@
                             <label>{{paymentDetails.pendingAmount + " " + paymentDetails.currency}}</label>
                         </div>
                     </div>
-        
+
                     <button class="btn btn-primary" [disabled]="planSelected && optionNumber != 0" (click)="paymentPlanSelected(0)" *ngIf="paymentDetails.paymentStatus === 'PARTIAL_FEE'">
                         Pay Now
                     </button>
                 </div>
-                
+
                 <div *ngIf="!paymentDetails.paymentStatus || paymentDetails.paymentStatus === 'REGISTRATION_FEE'">
                     <div class="row" style="padding-bottom: 10px;">
                         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -44,11 +44,11 @@
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xs-6">
                                             <h5 class="card-title">Make full payment</h5>
-        
+
                                         </div>
                                         <div class="col-md-6 col-sm-6 col-xs-6">
                                             <h5 class="card-title">{{paymentObj.full + " " + paymentObj.currency}}</h5>
-        
+
                                         </div>
                                     </div>
                                     <p class="card-text" style="color: red;">*Registration fee wayed off</p>
@@ -70,31 +70,31 @@
                                             <div class="row">
                                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                                     <p class="card-text">Registration fee</p>
-        
+
                                                 </div>
                                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                                     <p class="card-text">{{paymentObj.registration + " " + paymentObj.currency}}</p>
-        
+
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                                     <p class="card-text">1st Installment</p>
-        
+
                                                 </div>
                                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                                     <p class="card-text">{{paymentObj.plan1.inst1 + " " + paymentObj.currency}}</p>
-        
+
                                                 </div>
                                             </div>
                                             <div class="row" style="padding-bottom: 20px;">
                                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                                     <p class="card-text">2nd Installment</p>
-        
+
                                                 </div>
                                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                                     <p class="card-text">{{paymentObj.plan1.inst2 + " " + paymentObj.currency}}</p>
-        
+
                                                 </div>
                                             </div>
                                             <button class="btn btn-primary" [disabled]="planSelected && optionNumber != 2" (click)="paymentPlanSelected(2)">Select</button>
@@ -108,31 +108,31 @@
                                             <div class="row">
                                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                                     <p class="card-text">Registration fee</p>
-        
+
                                                 </div>
                                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                                     <p class="card-text">{{paymentObj.registration + " " + paymentObj.currency}}</p>
-        
+
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                                     <p class="card-text">1st Installment</p>
-        
+
                                                 </div>
                                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                                     <p class="card-text">{{paymentObj.plan2.inst1 + " " + paymentObj.currency}}</p>
-        
+
                                                 </div>
                                             </div>
                                             <div class="row" style="padding-bottom: 20px;">
                                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                                     <p class="card-text">2nd Installment</p>
-        
+
                                                 </div>
                                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                                     <p class="card-text">{{paymentObj.plan2.inst2 + " " + paymentObj.currency}}</p>
-        
+
                                                 </div>
                                             </div>
                                             <button class="btn btn-primary" [disabled]="planSelected && optionNumber != 3" (click)="paymentPlanSelected(3)">Select</button>
@@ -143,9 +143,9 @@
                         </div>
                     </div>
                 </div>
-        
+
                 <div class="row" style="padding-top: 20px;" *ngIf="!paymentDetails.paymentStatus">
-        
+
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="row">
                             <button [disabled]="planSelected && optionNumber != 4 && optionNumber != 4" (click)="paymentPlanSelected(4)" style="margin:auto;" class="btn btn-warning">
@@ -154,16 +154,16 @@
                         </div>
                     </div>
                 </div>
-        
+
             </div>
-      
+
             <div class="btn-group  mt-5">
               <button type="button" [disabled]="!planSelected" class="btn btn-secondary mr-3" (click)="planSelected = !planSelected; ">Reset</button>
               <button type="button" [disabled]="!planSelected" class="btn btn-secondary" awNextStep>Continue</button>
             </div>
           </div>
         </aw-wizard-step>
-    
+
         <aw-wizard-step [stepTitle]="'Payment Policies'">
             <div class="p-3">
                 <div class="centered-content mt-2">
@@ -172,9 +172,9 @@
 
                         <br><br>
 
-                        We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained. DOKS may change this privacy policy from time to time at DOKS sole discretion.    
+                        We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained. HAWKmay change this privacy policy from time to time at HAWKsole discretion.
                     </p>
-                    
+
                 </div>
 
                 <diV>
@@ -182,11 +182,11 @@
                         <li>All payments are NON-refundable.</li>
                         <li>Once a payment is done for a course; that amount cannot be transferred for another course; as we commit resources for reserving a course place for each registration.</li>
                         <li>Those who pay in installments should make their payments monthly on or before the due date.</li>
-                        <li>DOKS has the right to charge an interest on delayed payments.</li>
+                        <li>HAWKhas the right to charge an interest on delayed payments.</li>
                         <li>There may be a slight delay in registering a payment made via online payments, it is recommended to make the payment well in advance of the due date.</li>
                     </ul>
                 </diV>
-    
+
                 <div class="centered-content">
                     <div class="btn-group">
                         <button type="button" class="btn btn-secondary" awPreviousStep>Back</button>
