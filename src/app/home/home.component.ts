@@ -88,4 +88,8 @@ getAnnouncements() {
   goToSubscription() {
     window.location.href = this.subscriptionUrl;
   }
+
+  register() {
+    window.location.href = this.creatAccountUrl;
+  }
 }
